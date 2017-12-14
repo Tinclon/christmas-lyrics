@@ -9,9 +9,9 @@ Ext.define('Lyrics.LeafView', {
     config: {
         cls: 'leaf',
         styleHtmlContent: true,
-		scrollable : {
-			direction: 'vertical',
-			directionLock: true
+		scrollable: true,
+		layout: {
+			type: 'fit'
 		}
     }
 });
