@@ -20,6 +20,7 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
         		{ text: 'Hark! The Herald Angels Sing', leaf: true },
         		{ text: 'I Heard the Bells on Christmas Day', leaf: true },
         		{ text: 'It Came upon the Midnight Clear', leaf: true },
+        		{ text: 'Jingle Bells', leaf: true },
         		{ text: 'Joy to the world', leaf: true },
         		]
         	},
