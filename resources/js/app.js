@@ -9,6 +9,7 @@ Ext.define('Lyrics.LeafView', {
     config: {
         cls: 'leaf',
         styleHtmlContent: true,
+        scrollable: true,
         autoScroll: true
     }
 });
