@@ -55,7 +55,7 @@ Ext.application({
             		Ext.Ajax.request({
                          url: path.replace(/[^a-zA-Z0-9\/\.]/g,'_').toLowerCase(),
                          success: function(response) {
-                             detailCard.setHtml(response.responseText.replace(/[\n\r]/g,"<br/>")+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>");
+                             detailCard.setHtml(response.responseText.replace(/[\n\r]/g,"<br/>"));
                              //list.unmask();
                          },
                          failure: function() {
