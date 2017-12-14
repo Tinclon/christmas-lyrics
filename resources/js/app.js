@@ -10,7 +10,8 @@ Ext.define('Lyrics.LeafView', {
         cls: 'leaf',
         styleHtmlContent: true,
         scrollable: true,
-        autoScroll: true
+        autoScroll: true,
+        height: '100%'
     }
 });
 
