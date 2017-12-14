@@ -17,6 +17,7 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
         		]
         	},
         	{ text: 'N-Z', items: [
+        		{ text: 'Rudolph the Red Nosed Reindeer', leaf: true },
         		]
         	} ]
         }
