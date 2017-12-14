@@ -11,7 +11,12 @@ Ext.define('Lyrics.LeafView', {
         styleHtmlContent: true,
         scrollable: true,
         autoScroll: true,
-        height: '100%'
+        height: '100%',
+        listeners: {
+			render: function(c){
+				CSBfleXcroll.defer(1, window, [c.body.dom]);
+			}
+		}
     }
 });
 
