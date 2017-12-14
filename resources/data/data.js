@@ -12,7 +12,8 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
     	text: 'ChristmasLyrics',
         items: [
         	{ text: 'A-M', items: [
-        		{ text: 'Angels We Have Heard On High', leaf: true }
+        		{ text: 'Angels We Have Heard On High', leaf: true },
+        		{ text: 'Carol of the Bells', leaf: true }
         		]
         	},
         	{ text: 'N-Z', items: [
