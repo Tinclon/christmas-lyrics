@@ -19,6 +19,8 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
         		{ text: 'Frosty the Snowman', leaf: true },
         		{ text: 'Hark! The Herald Angels Sing', leaf: true },
         		{ text: 'I Heard the Bells on Christmas Day', leaf: true },
+        		{ text: 'I Wonder As I Wander', leaf: true },
+        		{ text: 'I\m Getting Nuttin\' For Christmas', leaf: true },
         		{ text: 'It Came upon the Midnight Clear', leaf: true },
         		{ text: 'Jingle Bells', leaf: true },
         		{ text: 'Joy to the world', leaf: true },
