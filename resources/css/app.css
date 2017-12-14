@@ -5,3 +5,7 @@
 }
 .leaf {
 }
+
+.x-scroll-container {
+	overflow-y: scroll;
+}

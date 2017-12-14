@@ -9,11 +9,7 @@ Ext.define('Lyrics.LeafView', {
     config: {
         cls: 'leaf',
         styleHtmlContent: true,
-		layout: 'vbox',
-		scrollable : {
-			direction: 'vertical',
-			directionLock: true
-		}
+	    scrollable: true
     }
 });
 
