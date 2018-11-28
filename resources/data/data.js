@@ -59,6 +59,7 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
 			{ text: 'Santa Claus Is Coming to Town', leaf: true },
 			{ text: 'Silent Night', leaf: true },
 			{ text: 'Silver Bells', leaf: true },
+			{ text: 'Sing We Now of Christmas', leaf: true },
 			{ text: 'Six White Boomers', leaf: true },
 			{ text: 'Sleigh Ride', leaf: true },
 			{ text: 'Stars Were Gleaming', leaf: true },
