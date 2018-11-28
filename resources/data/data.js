@@ -44,6 +44,7 @@ var treeStore = Ext.create('Ext.data.TreeStore', {
 			{ text: 'Marshmallow World', leaf: true },
 			{ text: 'Mary, Did You Know?', leaf: true },
 			{ text: 'Mele Kalikimaka', leaf: true },
+			{ text: 'Noël Nouvelet', leaf: true },
 			{ text: 'O Christmas Tree', leaf: true },
 			{ text: 'O Come O Come Emmanuel', leaf: true },
 			{ text: 'O Holy Night', leaf: true },
