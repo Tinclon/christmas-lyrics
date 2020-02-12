@@ -13,13 +13,18 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 
+import getScriptures from './scriptures';
 import getSongs from './songs';
 
+const appTitle = "Christmas";
 const drawerWidth = 320;
 const useStyles = makeStyles(theme => ({
     root: {
@@ -62,6 +67,9 @@ const useStyles = makeStyles(theme => ({
     drawerTitle: {
         width: '100%'
     },
+    drawerSubtitle: {
+        width: '100%'
+    },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
@@ -78,6 +86,9 @@ const useStyles = makeStyles(theme => ({
         }),
         marginLeft: 0,
     },
+    hidden: {
+        visibility: "hidden"
+    }
 }));
 
 export default function ChristmasLyrics() {
@@ -85,26 +96,38 @@ export default function ChristmasLyrics() {
     const theme = createMuiTheme({palette: {type: "dark"}});
 
     const [open, setOpen] = React.useState(false);
+    const [songs, setSongs] = React.useState(getSongs());
+    const [currentDate, setCurrentDate] = React.useState((new Date()).getDate());
     const [currentSongTitle, setCurrentSongTitle] = React.useState();
 
     // Set the current song from the url
     useEffect(() => window.onpopstate = () => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])));
     if(!currentSongTitle && window.location.hash.split("#")[1]) {
-        setTimeout(() => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])))
+        setTimeout(() => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])));
         return <Fragment/>
     }
 
-    const songs = getSongs();
+    const scriptures = getScriptures();
+    const scripture = (scriptures.find(scripture => scripture.date === currentDate) || {}).ref || "";
     const song = songs.find(song => song.title === currentSongTitle) || {};
     const title = song.title || "";
     const lyrics = song.lyrics || "";
 
+    songs.forEach(song => song.sung = (localStorage.getItem(song.title) || 0));
+
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
-    const handleChooseSong = title => () => {
-        window.location.hash = encodeURI(title);
-        setCurrentSongTitle(title);
-        handleDrawerClose();
+    const handleDateChange = date => () => setCurrentDate(date);
+    const handleChooseSong = title => () => (window.location.hash = encodeURI(title)) && handleDrawerClose();
+    const handleSungSong = song => () => {
+        ++song.sung;
+        localStorage.setItem(song.title, song.sung);
+        setSongs([...songs]);
+    };
+    const handleUnsungSongs = () => {
+        songs.forEach(song => song.sung = 0);
+        localStorage.clear();
+        setSongs([...songs]);
     };
 
     return (
@@ -127,7 +150,7 @@ export default function ChristmasLyrics() {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" noWrap>
-                            {title || "Christmas Songs"}
+                            {title || appTitle}
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -139,16 +162,45 @@ export default function ChristmasLyrics() {
                     classes={{paper: classes.drawerPaper}}
                 >
                     <div className={classes.drawerHeader}>
-                        <Button className={classes.drawerTitle} onClick={handleDrawerClose}>Christmas Songs</Button>
+                        <Button className={classes.drawerTitle} onClick={handleChooseSong("")}>
+                            {appTitle}
+                        </Button>
                         <IconButton onClick={handleDrawerClose}>
                             <ChevronLeftIcon />
                         </IconButton>
                     </div>
+                    <div className={classes.drawerSubtitle}>
+                        <IconButton
+                            onClick={handleDateChange(currentDate - 1)}
+                            className={clsx({[classes.hidden]: currentDate <= 1 })} >
+                            <ChevronLeftIcon />
+                        </IconButton>
+                        <Button onClick={handleDateChange((new Date()).getDate())} style={{fontSize: "10px"}}>
+                            {`December ${currentDate}: ${scripture}`}
+                        </Button>
+                        <IconButton
+                            onClick={handleDateChange(currentDate + 1)}
+                            style={{float: "right"}}
+                            className={clsx({[classes.hidden]: currentDate >= 24 })}>
+                            <ChevronRightIcon />
+                        </IconButton>
+                    </div>
                     <Divider />
-                    <List>
-                        {songs.map(({title}) => (
-                            <ListItem button key={title} onClick={handleChooseSong(title)}>
-                                <ListItemText primary={title} />
+                    <Button onClick={handleUnsungSongs}>
+                        Unsing all
+                    </Button>
+                    <Divider />
+                    <List dense={true}>
+                        {songs.map(song => (
+                            <ListItem button key={song.title} onClick={handleChooseSong(song.title)}>
+                                <ListItemText primary={song.title} />
+                                <ListItemSecondaryAction>
+                                    <Checkbox
+                                        edge="end"
+                                        onChange={handleSungSong(song)}
+                                        checked={song.sung > 0}
+                                    />
+                                </ListItemSecondaryAction>
                             </ListItem>
                         ))}
                     </List>
@@ -161,7 +213,7 @@ export default function ChristmasLyrics() {
                 >
                     <div className={classes.drawerHeader} />
                     <Typography paragraph>
-                        {lyrics.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
+                        {lyrics && lyrics.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
                     </Typography>
                 </main>
             </div>
