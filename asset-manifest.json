@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/christmas-lyrics/static/js/main.d312a29e.chunk.js",
+    "main.js.map": "/christmas-lyrics/static/js/main.d312a29e.chunk.js.map",
+    "runtime-main.js": "/christmas-lyrics/static/js/runtime-main.52603e7e.js",
+    "runtime-main.js.map": "/christmas-lyrics/static/js/runtime-main.52603e7e.js.map",
+    "static/js/2.a5c5d7d5.chunk.js": "/christmas-lyrics/static/js/2.a5c5d7d5.chunk.js",
+    "static/js/2.a5c5d7d5.chunk.js.map": "/christmas-lyrics/static/js/2.a5c5d7d5.chunk.js.map",
+    "index.html": "/christmas-lyrics/index.html",
+    "precache-manifest.a23d80eb023af7bef0089d292dc79c25.js": "/christmas-lyrics/precache-manifest.a23d80eb023af7bef0089d292dc79c25.js",
+    "service-worker.js": "/christmas-lyrics/service-worker.js",
+    "static/js/2.a5c5d7d5.chunk.js.LICENSE.txt": "/christmas-lyrics/static/js/2.a5c5d7d5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52603e7e.js",
+    "static/js/2.a5c5d7d5.chunk.js",
+    "static/js/main.d312a29e.chunk.js"
+  ]
+}
