@@ -91,6 +91,10 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const _iOSDevice = !!navigator.platform.match(/iOS|iPhone|iPod|iPad/i);
+const _androidDevice = !!navigator.platform.match(/Android/i);
+const linkPrefix = _iOSDevice || _androidDevice ? "gospellibrary://content/scriptures/" : "https://www.churchofjesuschrist.org/study/scriptures/";
+
 export default function ChristmasLyrics() {
     const classes = useStyles();
     const theme = createMuiTheme({palette: {type: "dark"}});
@@ -108,24 +112,25 @@ export default function ChristmasLyrics() {
     }
 
     const scriptures = getScriptures();
-    const scripture = (scriptures.find(scripture => scripture.date === currentDate) || {}).ref || "";
+    const scripture = (scriptures.find(scripture => scripture.date === currentDate) || {}) || {};
     const song = songs.find(song => song.title === currentSongTitle) || {};
     const title = song.title || "";
     const lyrics = song.lyrics || "";
 
-    songs.forEach(song => song.sung = (localStorage.getItem(song.title) || 0));
+    songs.forEach(song => song.sung = (localStorage.getItem(song.title) || "0"));
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
     const handleDateChange = date => () => setCurrentDate(date);
+    const handleNavigate = scripture => () => window.open(linkPrefix + scripture.link, "_blank");
     const handleChooseSong = title => () => (window.location.hash = encodeURI(title)) && handleDrawerClose();
-    const handleSungSong = song => () => {
-        ++song.sung;
+    const toggleSungSong = song => () => {
+        song.sung = song.sung === "0" ? "1" : "0";
         localStorage.setItem(song.title, song.sung);
         setSongs([...songs]);
     };
     const handleUnsungSongs = () => {
-        songs.forEach(song => song.sung = 0);
+        songs.forEach(song => song.sung = "0");
         localStorage.clear();
         setSongs([...songs]);
     };
@@ -175,8 +180,8 @@ export default function ChristmasLyrics() {
                             className={clsx({[classes.hidden]: currentDate <= 1 })} >
                             <ChevronLeftIcon />
                         </IconButton>
-                        <Button onClick={handleDateChange((new Date()).getDate())} style={{fontSize: "10px"}}>
-                            {`December ${currentDate}: ${scripture}`}
+                        <Button onClick={handleNavigate(scripture)} style={{fontSize: "10px"}}>
+                            {`December ${currentDate}: ${scripture.ref}`}
                         </Button>
                         <IconButton
                             onClick={handleDateChange(currentDate + 1)}
@@ -187,7 +192,7 @@ export default function ChristmasLyrics() {
                     </div>
                     <Divider />
                     <Button onClick={handleUnsungSongs}>
-                        Unsing all
+                        <div>Unsing all</div>
                     </Button>
                     <Divider />
                     <List dense={true}>
@@ -197,7 +202,7 @@ export default function ChristmasLyrics() {
                                 <ListItemSecondaryAction>
                                     <Checkbox
                                         edge="end"
-                                        onChange={handleSungSong(song)}
+                                        onChange={toggleSungSong(song)}
                                         checked={song.sung > 0}
                                     />
                                 </ListItemSecondaryAction>
