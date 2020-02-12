@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import clsx from 'clsx';
 
 import {ThemeProvider} from "@material-ui/styles";
@@ -88,9 +88,12 @@ export default function ChristmasLyrics() {
     const [currentSongTitle, setCurrentSongTitle] = React.useState();
 
     // Set the current song from the url
+    useEffect(() => window.onpopstate = () => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])));
     if(!currentSongTitle && window.location.hash.split("#")[1]) {
         setTimeout(() => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])))
+        return <Fragment/>
     }
+
     const songs = getSongs();
     const song = songs.find(song => song.title === currentSongTitle) || {};
     const title = song.title || "";
@@ -124,7 +127,7 @@ export default function ChristmasLyrics() {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" noWrap>
-                            {title}
+                            {title || "Christmas Songs"}
                         </Typography>
                     </Toolbar>
                 </AppBar>
