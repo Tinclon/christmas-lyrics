@@ -31,7 +31,7 @@ import getSongs from './songs';
 import getPeople from './people';
 
 const appTitle = "Christmas";
-const drawerWidth = 320;
+const drawerWidth = 330;
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
@@ -110,9 +110,6 @@ const useStyles = makeStyles(theme => ({
     },
     chip: {
         verticalAlign: 'text-bottom'
-    },
-    hidden: {
-        visibility: 'hidden'
     }
 }));
 
@@ -123,8 +120,6 @@ const useStyles = makeStyles(theme => ({
 // const linkPrefix = _iOSDevice || _androidDevice ? "gospellibrary://content/scriptures/" : "https://www.churchofjesuschrist.org/study/scriptures/";
 // const handleNavigate = scripture => () => window.open(linkPrefix + scripture.link, "_blank");
 
-const DECEMBER = 11;
-
 export default function ChristmasLyrics() {
     // Configure styles and theme
     const classes = useStyles();
@@ -133,7 +128,7 @@ export default function ChristmasLyrics() {
     // Create hooks
     const [open, setOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(getSongs());
-    const [currentDate, setCurrentDate] = React.useState((new Date()).getMonth() === DECEMBER ? `${(new Date()).getDate()}` : "0");
+    const [currentDate, setCurrentDate] = React.useState(`${(new Date()).getDate()}`);
     const [currentOpusReference, setCurrentOpusReference] = React.useState();
 
     // Set the current opus from the url
@@ -144,6 +139,7 @@ export default function ChristmasLyrics() {
     }
 
     // Pull in all the data
+    const year = (new Date()).getFullYear();
     const date = (new Date()).getDate();
     const people = getPeople();
     const scriptures = getScriptures();
@@ -156,18 +152,14 @@ export default function ChristmasLyrics() {
     const datestamp = localStorage.getItem("datestamp");
     if(!datestamp || new Date((new Date()) - (1000 * 60 * 60 * 24 * 250)) > (new Date(datestamp))) {
         localStorage.clear();
-        localStorage.setItem("peoplestamp", `${Math.floor(Math.random() * Math.floor(100))}`);
     }
     // Set the sung count
     songs.forEach(song => song.sung = (localStorage.getItem(song.title) || "0"));
-    // Set the people stamp
-    const peopleStamp = localStorage.getItem("peoplestamp") || Math.floor(Math.random() * Math.floor(100));
-    localStorage.setItem("peoplestamp", `${peopleStamp}`);
 
     // Set up handlers
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
-    const handleDateChange = date => () => setCurrentDate(`${date}`);
+    const handleDateChange = date => () => setCurrentDate(`${((date % 24 + 24) % 24) || 24}`);
     const handleChooseOpus = reference => () => (window.location.hash = encodeURI(reference)) && handleDrawerClose();
     const toggleSungSong = song => () => {
         song.sung = song.sung === "0" ? "1" : "0";
@@ -222,8 +214,7 @@ export default function ChristmasLyrics() {
                             </div>
                             <div className={classes.drawerSubtitle}>
                                 <IconButton
-                                    onClick={handleDateChange(parseInt(currentDate) - 1)}
-                                    className={clsx({[classes.hidden]: !scripture.ref || currentDate <= 1 })} >
+                                    onClick={handleDateChange(parseInt(currentDate) - 1)} >
                                     <ChevronLeftIcon />
                                 </IconButton>
                                 <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
@@ -231,8 +222,7 @@ export default function ChristmasLyrics() {
                                 </Button>
                                 <IconButton
                                     onClick={handleDateChange(parseInt(currentDate) + 1)}
-                                    style={{float: "right"}}
-                                    className={clsx({[classes.hidden]: !scripture.ref || currentDate >= 24 })}>
+                                    style={{float: "right"}} >
                                     <ChevronRightIcon />
                                 </IconButton>
                             </div>
@@ -270,16 +260,16 @@ export default function ChristmasLyrics() {
                             <Container maxWidth="sm" style={{padding: "10px"}}>
                                 <Paper elevation={10} style={{padding: "10px"}}>
                                     <Box>
-                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"candle"}>🕯</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 0) % people.length].name} /></Box>
-                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"song"}>🎵</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 1) % people.length].name} /></Box>
+                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"candle"}>🕯</span><Chip className={classes.chip} label={people[(year + date) % people.length].name} /></Box>
+                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"song"}>🎵</span><Chip className={classes.chip} label={people[(year + date + 1) % people.length].name} /></Box>
                                     </Box>
                                     <Box>
-                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"scripture"}>📖</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 2) % people.length].name} /></Box>
-                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"song"}>🎵</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 3) % people.length].name} /></Box>
+                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"scripture"}>📖</span><Chip className={classes.chip} label={people[(year + date + 2) % people.length].name} /></Box>
+                                        <Box className={classes.box}><span className={classes.emoji} role={"img"} aria-label={"song"}>🎵</span><Chip className={classes.chip} label={people[(year + date + 3) % people.length].name} /></Box>
                                     </Box>
                                     <Box>
-                                        <Box className={classes.box} ><span className={classes.emoji} role={"img"} aria-label={"prayer"}>🙏</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 4) % people.length].name} /></Box>
-                                        <Box className={classes.box} ><span className={classes.emoji} role={"img"} aria-label={"candle"}>🕯</span><Chip className={classes.chip} label={people[(parseInt(peopleStamp) + date + 5) % people.length].name} /></Box>
+                                        <Box className={classes.box} ><span className={classes.emoji} role={"img"} aria-label={"prayer"}>🙏</span><Chip className={classes.chip} label={people[(year + date + 4) % people.length].name} /></Box>
+                                        <Box className={classes.box} ><span className={classes.emoji} role={"img"} aria-label={"candle"}>🕯</span><Chip className={classes.chip} label={people[(year + date + 5) % people.length].name} /></Box>
                                    </Box>
                                 </Paper>
                             </Container>
