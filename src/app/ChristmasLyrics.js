@@ -24,6 +24,7 @@ import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import getScriptures from './scriptures';
 import getSongs from './songs';
 import Container from "@material-ui/core/Container";
+import ListSubheader from "@material-ui/core/ListSubheader";
 
 const appTitle = "Christmas";
 const drawerWidth = 320;
@@ -64,6 +65,14 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(0, 1),
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
+    },
+    list: {
+        paddingTop: '0'
+    },
+    listSubHeader: {
+      backgroundColor: theme.palette.grey[800],
+        paddingTop: '8px',
+        paddingBottom: '8px'
     },
     drawerTitle: {
         width: '100%'
@@ -178,32 +187,36 @@ export default function ChristmasLyrics() {
                     open={open}
                     classes={{paper: classes.drawerPaper}}
                 >
-                    <div className={classes.drawerHeader}>
-                        <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
-                            {appTitle}
-                        </Button>
-                        <IconButton onClick={handleDrawerClose}>
-                            <ChevronLeftIcon />
-                        </IconButton>
-                    </div>
-                    <div className={classes.drawerSubtitle}>
-                        <IconButton
-                            onClick={handleDateChange(parseInt(currentDate) - 1)}
-                            className={clsx({[classes.hidden]: !scripture.ref || currentDate <= 1 })} >
-                            <ChevronLeftIcon />
-                        </IconButton>
-                        <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
-                            {(scripture.ref && `December ${currentDate}: ${scripture.ref}`) || "See you next December!"}
-                        </Button>
-                        <IconButton
-                            onClick={handleDateChange(parseInt(currentDate) + 1)}
-                            style={{float: "right"}}
-                            className={clsx({[classes.hidden]: !scripture.ref || currentDate >= 24 })}>
-                            <ChevronRightIcon />
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List dense={true}>
+                    <List dense={true} className={classes.list}>
+                        <ListSubheader className={classes.listSubHeader} style={{paddingTop: "8px", paddingBottom: "8px"}}>
+
+                            <Divider />
+                            <div className={classes.drawerHeader}>
+                                <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
+                                    {appTitle}
+                                </Button>
+                                <IconButton onClick={handleDrawerClose}>
+                                    <ChevronLeftIcon />
+                                </IconButton>
+                            </div>
+                            <div className={classes.drawerSubtitle}>
+                                <IconButton
+                                    onClick={handleDateChange(parseInt(currentDate) - 1)}
+                                    className={clsx({[classes.hidden]: !scripture.ref || currentDate <= 1 })} >
+                                    <ChevronLeftIcon />
+                                </IconButton>
+                                <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
+                                    {(scripture.ref && `December ${currentDate}: ${scripture.ref}`) || "See you next December!"}
+                                </Button>
+                                <IconButton
+                                    onClick={handleDateChange(parseInt(currentDate) + 1)}
+                                    style={{float: "right"}}
+                                    className={clsx({[classes.hidden]: !scripture.ref || currentDate >= 24 })}>
+                                    <ChevronRightIcon />
+                                </IconButton>
+                            </div>
+                            <Divider />
+                        </ListSubheader>
                         {songs.map(song => (
                             <ListItem button key={song.title} onClick={handleChooseOpus(song.title)}>
                                 <ListItemText primary={song.title} />
