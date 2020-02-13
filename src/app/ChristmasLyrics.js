@@ -23,6 +23,7 @@ import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 
 import getScriptures from './scriptures';
 import getSongs from './songs';
+import Container from "@material-ui/core/Container";
 
 const appTitle = "Christmas";
 const drawerWidth = 320;
@@ -98,15 +99,17 @@ const useStyles = makeStyles(theme => ({
 // const linkPrefix = _iOSDevice || _androidDevice ? "gospellibrary://content/scriptures/" : "https://www.churchofjesuschrist.org/study/scriptures/";
 // const handleNavigate = scripture => () => window.open(linkPrefix + scripture.link, "_blank");
 
+const DECEMBER = 11;
+
 export default function ChristmasLyrics() {
-    // Configure sytles and theme
+    // Configure styles and theme
     const classes = useStyles();
     const theme = createMuiTheme({palette: {type: "dark"}});
 
     // Create hooks
     const [open, setOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(getSongs());
-    const [currentDate, setCurrentDate] = React.useState(`${(new Date()).getDate()}`);
+    const [currentDate, setCurrentDate] = React.useState((new Date()).getMonth() === DECEMBER ? `${(new Date()).getDate()}` : "0");
     const [currentOpusReference, setCurrentOpusReference] = React.useState();
 
     // Set the current opus from the url
@@ -176,7 +179,7 @@ export default function ChristmasLyrics() {
                     classes={{paper: classes.drawerPaper}}
                 >
                     <div className={classes.drawerHeader}>
-                        <Button className={classes.drawerTitle} onClick={handleDrawerClose}>
+                        <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
                             {appTitle}
                         </Button>
                         <IconButton onClick={handleDrawerClose}>
@@ -186,16 +189,16 @@ export default function ChristmasLyrics() {
                     <div className={classes.drawerSubtitle}>
                         <IconButton
                             onClick={handleDateChange(parseInt(currentDate) - 1)}
-                            className={clsx({[classes.hidden]: currentDate <= 1 })} >
+                            className={clsx({[classes.hidden]: !scripture.ref || currentDate <= 1 })} >
                             <ChevronLeftIcon />
                         </IconButton>
                         <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
-                            {`December ${currentDate}: ${scripture.ref}`}
+                            {(scripture.ref && `December ${currentDate}: ${scripture.ref}`) || "See you next December!"}
                         </Button>
                         <IconButton
                             onClick={handleDateChange(parseInt(currentDate) + 1)}
                             style={{float: "right"}}
-                            className={clsx({[classes.hidden]: currentDate >= 24 })}>
+                            className={clsx({[classes.hidden]: !scripture.ref || currentDate >= 24 })}>
                             <ChevronRightIcon />
                         </IconButton>
                     </div>
@@ -225,6 +228,11 @@ export default function ChristmasLyrics() {
                     <Typography paragraph>
                         {opusText && opusText.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
                     </Typography>
+                    {!opusText &&
+                        <Container maxWidth="sm">
+                            <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" style={{width: "100%", height: "100%"}}/>
+                        </Container>
+                    }
                 </main>
             </div>
         </ThemeProvider>
