@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
+import clsx from "clsx";
 
 import Typography from '@material-ui/core/Typography';
-
 import Container from "@material-ui/core/Container";
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
@@ -13,17 +13,21 @@ export default props => {
         year,
         date,
         people,
-        opus
+        opus,
+        open,
+        handleDrawerClose
     } = props;
 
     // Build the UI
     return (
-        <Fragment>
+        <main
+            onClick={handleDrawerClose}
+            className={clsx(classes.content, {[classes.contentShift]: open})} >
             <div className={classes.drawerHeader} />
             <Typography paragraph>
-                {opus && opus.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
+                {opus.text && opus.text.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
             </Typography>
-            {!opus &&
+            {!opus.text &&
                 <Fragment>
                     <Container maxWidth="sm">
                         <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" style={{width: "100%", height: "100%"}}/>
@@ -46,6 +50,6 @@ export default props => {
                     </Container>
                 </Fragment>
             }
-        </Fragment>
+        </main>
     );
 }

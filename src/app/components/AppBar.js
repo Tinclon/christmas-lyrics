@@ -10,8 +10,8 @@ import Typography from "@material-ui/core/Typography";
 export default props => {
     const {
         classes,
-        appTitle,
-        opusTitle,
+        title,
+        opus,
         open,
         handleDrawerOpen
     } = props;
@@ -34,7 +34,7 @@ export default props => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap>
-                    {opusTitle || appTitle}
+                    {opus.title || title}
                 </Typography>
             </Toolbar>
         </AppBar>

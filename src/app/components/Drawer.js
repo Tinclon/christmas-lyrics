@@ -17,8 +17,8 @@ export default props => {
     const {
         classes,
         open,
-        currentDate,
-        appTitle,
+        date,
+        title,
         songs,
         scripture,
         handleChooseOpus,
@@ -42,7 +42,7 @@ export default props => {
                     <Divider />
                     <div className={classes.drawerHeader}>
                         <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
-                            {appTitle}
+                            {title}
                         </Button>
                         <IconButton onClick={handleDrawerClose}>
                             <ChevronLeftIcon />
@@ -50,14 +50,14 @@ export default props => {
                     </div>
                     <div className={classes.drawerSubtitle}>
                         <IconButton
-                            onClick={handleDateChange(parseInt(currentDate) - 1)} >
+                            onClick={handleDateChange(parseInt(date) - 1)} >
                             <ChevronLeftIcon />
                         </IconButton>
                         <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
-                            {(scripture.ref && `December ${currentDate}: ${scripture.ref}`) || "See you next December!"}
+                            {(scripture.ref && `December ${date}: ${scripture.ref}`) || "See you next December!"}
                         </Button>
                         <IconButton
-                            onClick={handleDateChange(parseInt(currentDate) + 1)}
+                            onClick={handleDateChange(parseInt(date) + 1)}
                             style={{float: "right"}} >
                             <ChevronRightIcon />
                         </IconButton>
