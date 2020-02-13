@@ -16,6 +16,7 @@ import getPeople from '../data/people';
 
 const title = "Christmas";
 const drawerWidth = 330;
+
 // Navigation
 // Doesn't work very well, so I inlined the scriptures
 // const _iOSDevice = !!navigator.platform.match(/iOS|iPhone|iPod|iPad/i);

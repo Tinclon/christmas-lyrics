@@ -6,8 +6,8 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import ChevronLeftIcon from "@material-ui/core/SvgIcon/SvgIcon";
-import ChevronRightIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
@@ -38,7 +38,6 @@ export default props => {
         >
             <List dense={true} className={classes.list}>
                 <ListSubheader className={classes.listSubHeader} style={{paddingTop: "8px", paddingBottom: "8px"}}>
-
                     <Divider />
                     <div className={classes.drawerHeader}>
                         <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
