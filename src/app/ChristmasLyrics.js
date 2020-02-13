@@ -91,50 +91,59 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const _iOSDevice = !!navigator.platform.match(/iOS|iPhone|iPod|iPad/i);
-const _androidDevice = !!navigator.platform.match(/Android/i);
-const linkPrefix = _iOSDevice || _androidDevice ? "gospellibrary://content/scriptures/" : "https://www.churchofjesuschrist.org/study/scriptures/";
+// Navigation
+// Doesn't work very well, so I inlined the scriptures
+// const _iOSDevice = !!navigator.platform.match(/iOS|iPhone|iPod|iPad/i);
+// const _androidDevice = !!navigator.platform.match(/Android/i);
+// const linkPrefix = _iOSDevice || _androidDevice ? "gospellibrary://content/scriptures/" : "https://www.churchofjesuschrist.org/study/scriptures/";
+// const handleNavigate = scripture => () => window.open(linkPrefix + scripture.link, "_blank");
 
 export default function ChristmasLyrics() {
+    // Configure sytles and theme
     const classes = useStyles();
     const theme = createMuiTheme({palette: {type: "dark"}});
 
+    // Create hooks
     const [open, setOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(getSongs());
-    const [currentDate, setCurrentDate] = React.useState((new Date()).getDate());
-    const [currentSongTitle, setCurrentSongTitle] = React.useState();
+    const [currentDate, setCurrentDate] = React.useState(`${(new Date()).getDate()}`);
+    const [currentOpusReference, setCurrentOpusReference] = React.useState();
 
-    // Set the current song from the url
-    useEffect(() => window.onpopstate = () => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])));
-    if(!currentSongTitle && window.location.hash.split("#")[1]) {
-        setTimeout(() => setCurrentSongTitle(decodeURI(window.location.hash.split("#")[1])));
+    // Set the current opus from the url
+    useEffect(() => window.onpopstate = () => setCurrentOpusReference(decodeURI(window.location.hash.split("#")[1])));
+    if(!currentOpusReference && window.location.hash.split("#")[1]) {
+        setTimeout(() => setCurrentOpusReference(decodeURI(window.location.hash.split("#")[1])));
         return <Fragment/>
     }
 
+    // Pull in all the data
     const scriptures = getScriptures();
     const scripture = (scriptures.find(scripture => scripture.date === currentDate) || {}) || {};
-    const song = songs.find(song => song.title === currentSongTitle) || {};
-    const title = song.title || "";
-    const lyrics = song.lyrics || "";
+    const opus = songs.find(song => song.title === currentOpusReference) || scriptures.find(scripture => scripture.date === currentOpusReference) || {};
+    const opusTitle = opus.title || opus.ref;
+    const opusText = opus.lyrics || opus.scripture;
 
+    // Clear the local storage if it's too old
+    const datestamp = localStorage.getItem("datestamp");
+    if(!datestamp || new Date((new Date()) - (1000 * 60 * 60 * 24 * 250)) > (new Date(datestamp))) {
+        localStorage.clear();
+    }
+    // Set the sung count
     songs.forEach(song => song.sung = (localStorage.getItem(song.title) || "0"));
 
+    // Set up handlers
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
-    const handleDateChange = date => () => setCurrentDate(date);
-    const handleNavigate = scripture => () => window.open(linkPrefix + scripture.link, "_blank");
-    const handleChooseSong = title => () => (window.location.hash = encodeURI(title)) && handleDrawerClose();
+    const handleDateChange = date => () => setCurrentDate(`${date}`);
+    const handleChooseOpus = reference => () => (window.location.hash = encodeURI(reference)) && handleDrawerClose();
     const toggleSungSong = song => () => {
         song.sung = song.sung === "0" ? "1" : "0";
         localStorage.setItem(song.title, song.sung);
-        setSongs([...songs]);
-    };
-    const handleUnsungSongs = () => {
-        songs.forEach(song => song.sung = "0");
-        localStorage.clear();
+        localStorage.setItem("datestamp", (new Date()).toISOString().split("T")[0]);
         setSongs([...songs]);
     };
 
+    // Build the UI
     return (
         <ThemeProvider theme={theme}>
             <div className={classes.root}>
@@ -155,7 +164,7 @@ export default function ChristmasLyrics() {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" noWrap>
-                            {title || appTitle}
+                            {opusTitle || appTitle}
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -167,7 +176,7 @@ export default function ChristmasLyrics() {
                     classes={{paper: classes.drawerPaper}}
                 >
                     <div className={classes.drawerHeader}>
-                        <Button className={classes.drawerTitle} onClick={handleChooseSong("")}>
+                        <Button className={classes.drawerTitle} onClick={handleDrawerClose}>
                             {appTitle}
                         </Button>
                         <IconButton onClick={handleDrawerClose}>
@@ -176,28 +185,24 @@ export default function ChristmasLyrics() {
                     </div>
                     <div className={classes.drawerSubtitle}>
                         <IconButton
-                            onClick={handleDateChange(currentDate - 1)}
+                            onClick={handleDateChange(parseInt(currentDate) - 1)}
                             className={clsx({[classes.hidden]: currentDate <= 1 })} >
                             <ChevronLeftIcon />
                         </IconButton>
-                        <Button onClick={handleNavigate(scripture)} style={{fontSize: "10px"}}>
+                        <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
                             {`December ${currentDate}: ${scripture.ref}`}
                         </Button>
                         <IconButton
-                            onClick={handleDateChange(currentDate + 1)}
+                            onClick={handleDateChange(parseInt(currentDate) + 1)}
                             style={{float: "right"}}
                             className={clsx({[classes.hidden]: currentDate >= 24 })}>
                             <ChevronRightIcon />
                         </IconButton>
                     </div>
                     <Divider />
-                    <Button onClick={handleUnsungSongs}>
-                        <div>Unsing all</div>
-                    </Button>
-                    <Divider />
                     <List dense={true}>
                         {songs.map(song => (
-                            <ListItem button key={song.title} onClick={handleChooseSong(song.title)}>
+                            <ListItem button key={song.title} onClick={handleChooseOpus(song.title)}>
                                 <ListItemText primary={song.title} />
                                 <ListItemSecondaryAction>
                                     <Checkbox
@@ -218,7 +223,7 @@ export default function ChristmasLyrics() {
                 >
                     <div className={classes.drawerHeader} />
                     <Typography paragraph>
-                        {lyrics && lyrics.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
+                        {opusText && opusText.split("\n").reduce((acc, curr) => <Fragment>{acc}<br/>{curr.trim()}</Fragment>)}
                     </Typography>
                 </main>
             </div>

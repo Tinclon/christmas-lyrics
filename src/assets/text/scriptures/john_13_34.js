@@ -1,0 +1,5 @@
+export default () => `
+John 13:34
+
+34 A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another.
+`
