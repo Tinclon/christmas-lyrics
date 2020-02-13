@@ -26,9 +26,9 @@ import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 
-import getScriptures from './scriptures';
-import getSongs from './songs';
-import getPeople from './people';
+import getScriptures from '../data/scriptures';
+import getSongs from '../data/songs';
+import getPeople from '../data/people';
 
 const appTitle = "Christmas";
 const drawerWidth = 330;
