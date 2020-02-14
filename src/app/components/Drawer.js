@@ -16,11 +16,11 @@ import Checkbox from "@material-ui/core/Checkbox";
 export default props => {
     const {
         classes,
-        open,
         date,
         title,
         songs,
         scripture,
+        drawerOpen,
         handleChooseOpus,
         handleDrawerClose,
         handleDateChange,
@@ -33,17 +33,19 @@ export default props => {
             className={classes.drawer}
             variant="persistent"
             anchor="left"
-            open={open}
+            open={drawerOpen}
             classes={{paper: classes.drawerPaper}}
         >
-            <List dense={true} className={classes.list}>
-                <ListSubheader className={classes.listSubHeader} style={{paddingTop: "8px", paddingBottom: "8px"}}>
+            <List className={classes.list}>
+                <ListSubheader className={classes.listSubHeader}>
                     <Divider />
                     <div className={classes.drawerHeader}>
-                        <Button className={classes.drawerTitle} onClick={handleChooseOpus("home")}>
+                        <Button className={classes.drawerTitle}
+                                onClick={handleChooseOpus("home")}>
                             {title}
                         </Button>
-                        <IconButton onClick={handleDrawerClose}>
+                        <IconButton
+                            onClick={handleDrawerClose}>
                             <ChevronLeftIcon />
                         </IconButton>
                     </div>
@@ -52,7 +54,9 @@ export default props => {
                             onClick={handleDateChange(parseInt(date) - 1)} >
                             <ChevronLeftIcon />
                         </IconButton>
-                        <Button onClick={handleChooseOpus(scripture.date)} style={{fontSize: "10px"}}>
+                        <Button
+                            style={{fontSize: "10px"}}
+                            onClick={handleChooseOpus(scripture.date)} >
                             {(scripture.ref && `December ${date}: ${scripture.ref}`) || "See you next December!"}
                         </Button>
                         <IconButton

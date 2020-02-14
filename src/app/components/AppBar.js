@@ -12,7 +12,7 @@ export default props => {
         classes,
         title,
         opus,
-        open,
+        drawerOpen,
         handleDrawerOpen
     } = props;
 
@@ -21,7 +21,7 @@ export default props => {
         <AppBar
             position="fixed"
             color="default"
-            className={clsx(classes.appBar, {[classes.appBarShift]: open})}
+            className={clsx(classes.appBar, {[classes.appBarShift]: drawerOpen})}
         >
             <Toolbar>
                 <IconButton
@@ -29,7 +29,7 @@ export default props => {
                     aria-label="open drawer"
                     onClick={handleDrawerOpen}
                     edge="start"
-                    className={clsx(classes.menuButton, open && classes.hide)}
+                    className={clsx(classes.menuButton, {[classes.hide]: drawerOpen})}
                 >
                     <MenuIcon />
                 </IconButton>

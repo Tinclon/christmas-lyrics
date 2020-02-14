@@ -32,16 +32,16 @@ export default () => {
     const now = new Date();
 
     // Create hooks
-    const [open, setOpen] = React.useState(false);
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(getSongs());
     const [date, setDate] = React.useState(`${now.getDate()}`);
-    const [opusReference, setOpusReference] = React.useState();
+    const [opusReference, setOpusReference] = React.useState("");
 
     // Set the current opus from the url
-    const getUrlRef = () => decodeURI(window.location.hash.split("#")[1]);
-    useEffect(() => window.onpopstate = () => setOpusReference(getUrlRef()));
-    if(!opusReference && getUrlRef()) {
-        setTimeout(() => setOpusReference(getUrlRef()));
+    const getLocation = () => decodeURI(window.location.hash.split("#")[1]);
+    useEffect(() => window.onpopstate = () => setOpusReference(getLocation()));
+    if(!opusReference && getLocation()) {
+        setTimeout(() => setOpusReference(getLocation()));
         return <Fragment/>
     }
 
@@ -49,7 +49,7 @@ export default () => {
     const year = now.getFullYear();
     const people = getPeople();
     const scriptures = getScriptures();
-    const scripture = (scriptures.find(scripture => scripture.date === date) || {}) || {};
+    const scripture = scriptures.find(scripture => scripture.date === date) || {};
     const opus = songs.find(song => song.title === opusReference) || scriptures.find(scripture => scripture.date === opusReference) || {};
     opus.title = opus.title || opus.ref;
     opus.text = opus.lyrics || opus.scripture;
@@ -63,8 +63,8 @@ export default () => {
     songs.forEach(song => song.sung = (localStorage.getItem(song.title) || "0"));
 
     // Set up handlers
-    const handleDrawerOpen = () => setOpen(true);
-    const handleDrawerClose = () => setOpen(false);
+    const handleDrawerOpen = () => setDrawerOpen(true);
+    const handleDrawerClose = () => setDrawerOpen(false);
     const handleDateChange = date => () => setDate(`${((date % 24 + 24) % 24) || 24}`);
     const handleChooseOpus = reference => () => (window.location.hash = encodeURI(reference)) && handleDrawerClose();
     const toggleSungSong = song => () => {
@@ -75,7 +75,7 @@ export default () => {
     };
 
     const props = {
-        classes, year, date, title, open, people, songs, scripture, opus,
+        classes, year, date, title, people, songs, scripture, opus, drawerOpen,
         handleDrawerOpen, handleDrawerClose, handleDateChange, handleChooseOpus, toggleSungSong
     };
 
