@@ -26,7 +26,13 @@ export default props => {
             onClick={handleDrawerClose}
             className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
             <div className={classes.drawerHeader} />
-            <div className={classes.watermark}>{opus.watermark}</div>
+            <div className={classes.watermark}>
+                {
+                    opus.watermark
+                        && opus.watermark.split("\n").reduce((acc, curr) =>
+                         <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
+                }
+            </div>
             <Typography paragraph>
                 {
                     opus.text
