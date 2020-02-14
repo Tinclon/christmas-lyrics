@@ -85,6 +85,8 @@ export default drawerWidth => makeStyles(theme => ({
     },
     watermark: {
         position: "fixed",
+        bottom: "0",
+        right: "0",
         opacity: "0.15",
         fontSize: "200pt"
     }
