@@ -14,7 +14,6 @@ export default props => {
         classes,
         theme,
         scriptures,
-        songs: _songs,  // TODO: CNielsen: I just don't like this
         getLocation
     } = props;
 
@@ -22,7 +21,7 @@ export default props => {
 
     // Create hooks
     const [drawerOpen, setDrawerOpen] = React.useState(false);
-    const [songs, setSongs] = React.useState(_songs);
+    const [songs, setSongs] = React.useState(props.songs);
     const [date, setDate] = React.useState(`${now.getDate()}`);
     const [opusReference, setOpusReference] = React.useState("");
 
@@ -55,7 +54,7 @@ export default props => {
         song.sung = song.sung === "0" ? "1" : "0";
         localStorage.setItem(song.title, song.sung);
         localStorage.setItem("datestamp", (new Date()).toISOString().split("T")[0]);
-        setSongs([...songs]);   // TODO: CNielsen: I just don't like this
+        setSongs([...songs]);
     };
 
     props = {

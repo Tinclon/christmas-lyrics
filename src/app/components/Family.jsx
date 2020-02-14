@@ -17,21 +17,12 @@ export default props => {
     } = props;
 
     const StyledTreeItem = withStyles(() => ({
-        //.MuiTreeItem-root:focus > .MuiTreeItem-content
         '@global': {
             '.MuiTreeItem-root:focus > .MuiTreeItem-content': {
                 backgroundColor: 'inherit'
             }
         },
-        root: {
-            '&:focus > .content': {
-                 backgroundColor: 'orange'
-            }
-        },
         content: {
-            'root:focus': {
-                backgroundColor: 'orange'
-            },
             '&:hover': {
                 backgroundColor: 'inherit'
             }
