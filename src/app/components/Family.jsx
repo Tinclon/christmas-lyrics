@@ -50,7 +50,7 @@ export default props => {
                         Choose wisely...
                     </Typography>
                     <TreeView
-                        className={classes.familytree}
+                        className={classes.familyTree}
                         expanded={["Nielsen_pm"]}
                     >
                         <StyledTreeItem nodeId="Nielsen_pm" label="Nielsen" onClick={handleSetFamily("Nielsen_pm")} >

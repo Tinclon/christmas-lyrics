@@ -69,6 +69,10 @@ export default drawerWidth => makeStyles(theme => ({
         }),
         marginLeft: 0,
     },
+    contentFill: {
+        height: '100%',
+        minHeight: 'calc(100vh - 180px)'
+    },
     assignmentContainer: {
         padding: '10px'
     },
@@ -105,13 +109,13 @@ export default drawerWidth => makeStyles(theme => ({
         margin: '40px',
         paddingTop: '60px'
     },
-    familytree: {
+    familyTree: {
         paddingTop: '40px'
     },
-    newfamily: {
+    newFamily: {
+        cursor: 'pointer',
+        color: 'black',
         fontSize: '8pt',
-        textAlign: 'right',
-        paddingBottom: '10px',
-        paddingRight: '10px'
+        textAlign: 'right'
     }
 }))();

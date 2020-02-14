@@ -76,7 +76,7 @@ export default props => {
 
                 <main onClick={handleDrawerClose}
                       className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
-                    <div style={{height: '100%', minHeight: 'calc(100vh - 80px)'}}>
+                    <div className={classes.contentFill}>
                         <div className={classes.drawerHeader} />
                         {
                             (!opus.text
@@ -86,7 +86,7 @@ export default props => {
                     </div>
                     {
                         !opus.text &&
-                            <footer className={classes.newfamily} onClick={handleNewFamily}>
+                            <footer className={classes.newFamily} onClick={handleNewFamily}>
                                 I want a new family ...
                             </footer>
                     }
