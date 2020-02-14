@@ -14,7 +14,8 @@ export default props => {
         classes,
         theme,
         scriptures,
-        getLocation
+        getLocation,
+        handleNewFamily
     } = props;
 
     const now = new Date();
@@ -75,14 +76,21 @@ export default props => {
 
                 <main onClick={handleDrawerClose}
                       className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
-                    <div className={classes.drawerHeader} />
+                    <div style={{height: '100%', minHeight: 'calc(100vh - 80px)'}}>
+                        <div className={classes.drawerHeader} />
+                        {
+                            (!opus.text
+                                && <Silhouette {...props} />)
+                                || <Opus {...props} />
+                        }
+                    </div>
                     {
-                        (!opus.text
-                            && <Silhouette {...props} />)
-                            || <Opus {...props} />
+                        !opus.text &&
+                            <footer className={classes.newfamily} onClick={handleNewFamily}>
+                                I want a new family ...
+                            </footer>
                     }
                 </main>
-
             </div>
         </ThemeProvider>
     );

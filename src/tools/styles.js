@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 export default drawerWidth => makeStyles(theme => ({
     root: {
         display: 'flex',
+        height: '100%'
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
@@ -109,8 +110,8 @@ export default drawerWidth => makeStyles(theme => ({
     },
     newfamily: {
         fontSize: '8pt',
-        position: 'absolute',
-        bottom: '10px',
-        right: '10px'
+        textAlign: 'right',
+        paddingBottom: '10px',
+        paddingRight: '10px'
     }
 }))();

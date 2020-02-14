@@ -11,8 +11,7 @@ export default props => {
         classes,
         year,
         date,
-        people,
-        handleNewFamily
+        people
     } = props;
 
     const offset = year + date;
@@ -48,9 +47,6 @@ export default props => {
                     </Paper>
                 </Container>
             }
-            <div className={classes.newfamily} onClick={handleNewFamily}>
-                I want a new family ...
-            </div>
         </Fragment>
     );
 }
