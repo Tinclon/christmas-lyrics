@@ -1,5 +1,4 @@
 import {makeStyles} from "@material-ui/core/styles";
-import React from "react";
 
 export default drawerWidth => makeStyles(theme => ({
     root: {

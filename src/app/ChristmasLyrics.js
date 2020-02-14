@@ -13,6 +13,8 @@ import Opus from "./components/Opus";
 import getScriptures from '../data/scriptures';
 import getSongs from '../data/songs';
 import getPeople from '../data/people';
+import clsx from "clsx";
+import Silhouette from "./components/Silhouette";
 
 const title = "Christmas";
 const drawerWidth = 330;
@@ -86,7 +88,17 @@ export default () => {
                 <CssBaseline />
                 <AppBar {...props} />
                 <Drawer {...props} />
-                <Opus {...props} />
+
+                <main onClick={handleDrawerClose}
+                      className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
+                    <div className={classes.drawerHeader} />
+                    {
+                        !(opus.text
+                            && <Silhouette {...props} />)
+                            || <Opus {...props} />
+                    }
+                </main>
+
             </div>
         </ThemeProvider>
     );
