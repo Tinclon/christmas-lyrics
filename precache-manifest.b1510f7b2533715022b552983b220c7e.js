@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f48e07412b97b752a99cfbe9b7dcb967",
+    "revision": "b26de058ae0d6f5f1f5d442295c41a5b",
     "url": "/christmas-lyrics/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/christmas-lyrics/static/js/2.996c44ec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2db1d5818abdc8f81def",
-    "url": "/christmas-lyrics/static/js/main.700a2e98.chunk.js"
+    "revision": "c5ee9e6cd62d2c4b02c8",
+    "url": "/christmas-lyrics/static/js/main.1f5ac0f2.chunk.js"
   },
   {
     "revision": "8c7eea3c8465dc09acd1",
