@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import clsx from "clsx";
 
 import {ThemeProvider} from "@material-ui/styles";
@@ -30,7 +30,13 @@ export default props => {
     useEffect(() => window.onpopstate = () => setOpusReference(getLocation()));
     if(!opusReference && getLocation()) {
         setTimeout(() => setOpusReference(getLocation()));
-        return <Fragment/>
+        return (
+            <ThemeProvider theme={theme}>
+                <div className={classes.root}>
+                    <CssBaseline />
+                </div>
+            </ThemeProvider>
+        );
     }
 
     // Find the appropriate data
