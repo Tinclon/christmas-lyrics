@@ -26,6 +26,7 @@ export default props => {
             onClick={handleDrawerClose}
             className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
             <div className={classes.drawerHeader} />
+            <div className={classes.watermark}>{opus.watermark}</div>
             <Typography paragraph>
                 {
                     opus.text

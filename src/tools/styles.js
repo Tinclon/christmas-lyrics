@@ -1,4 +1,5 @@
 import {makeStyles} from "@material-ui/core/styles";
+import React from "react";
 
 export default drawerWidth => makeStyles(theme => ({
     root: {
@@ -81,5 +82,10 @@ export default drawerWidth => makeStyles(theme => ({
     },
     chip: {
         verticalAlign: 'text-bottom'
+    },
+    watermark: {
+        position: "fixed",
+        opacity: "0.15",
+        fontSize: "200pt"
     }
 }))();
