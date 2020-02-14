@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import clsx from "clsx";
 
 import {ThemeProvider} from "@material-ui/styles";
@@ -76,19 +76,24 @@ export default props => {
 
                 <main onClick={handleDrawerClose}
                       className={clsx(classes.content, {[classes.contentShift]: drawerOpen})} >
-                    <div className={classes.contentFill}>
-                        <div className={classes.drawerHeader} />
-                        {
-                            (!opus.text
-                                && <Silhouette {...props} />)
-                                || <Opus {...props} />
-                        }
-                    </div>
                     {
-                        !opus.text &&
-                            <footer className={classes.newFamily} onClick={handleNewFamily}>
-                                I want a new family ...
-                            </footer>
+                        (!opus.text &&
+                            <Fragment>
+                                <div className={clsx({[classes.contentFill]: !opus.text})}>
+                                    <div className={classes.drawerHeader} />
+                                    <Silhouette {...props} />
+                                </div>
+                                <footer className={classes.newFamily} onClick={handleNewFamily}>
+                                    I want a new family ...
+                                </footer>
+                            </Fragment>
+                            )
+                        || (
+                            <Fragment>
+                                <div className={classes.drawerHeader} />
+                                <Opus {...props} />
+                            </Fragment>
+                        )
                     }
                 </main>
             </div>

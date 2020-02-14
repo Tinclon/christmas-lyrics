@@ -70,7 +70,7 @@ export default drawerWidth => makeStyles(theme => ({
     },
     contentFill: {
         height: '100%',
-        minHeight: 'calc(100vh - 180px)'
+        minHeight: 'calc(100vh - 170px)'
     },
     assignmentContainer: {
         padding: '10px'
@@ -123,6 +123,8 @@ export default drawerWidth => makeStyles(theme => ({
         cursor: 'pointer',
         color: 'black',
         fontSize: '8pt',
+        paddingRight: '8px',
+        paddingBottom: '8px',
         textAlign: 'right'
     }
 }))();
