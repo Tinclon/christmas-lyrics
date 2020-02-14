@@ -25,10 +25,12 @@ export default props => {
     const [date, setDate] = React.useState(`${now.getDate()}`);
     const [opusReference, setOpusReference] = React.useState("");
 
-    // Set the current opus from the url
+    // Create effects
     useEffect(() => window.onpopstate = () => setOpusReference(getLocation()));
+
+    // Set the current opus from the url
     if(!opusReference && getLocation()) {
-        setTimeout(() => setOpusReference(getLocation()));
+        setOpusReference(getLocation());
         return (
             <ThemeProvider theme={theme}>
                 <div className={classes.root}>
