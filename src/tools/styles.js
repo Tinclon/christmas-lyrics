@@ -1,4 +1,5 @@
 import {makeStyles} from "@material-ui/core/styles";
+import React from "react";
 
 export default drawerWidth => makeStyles(theme => ({
     root: {
@@ -90,6 +91,11 @@ export default drawerWidth => makeStyles(theme => ({
     },
     invisible: {
         backgroundColor: theme.palette.grey.A400
+    },
+    silhouette: {
+        opacity: "0.6",
+        width: "100%",
+        height: "100%"
     },
     watermark: {
         position: "fixed",

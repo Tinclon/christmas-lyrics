@@ -33,7 +33,7 @@ export default props => {
                          <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
                 }
             </div>
-            <Paper elevation={opus.scripture && 10 || 0} className={clsx(classes.opusPaper, {[classes.invisible]: opus.lyrics})}>
+            <Paper elevation={(opus.scripture && 10) || 0} className={clsx(classes.opusPaper, {[classes.invisible]: !opus.scripture})}>
                 <Typography paragraph>
                     {
                         opus.text
@@ -45,7 +45,7 @@ export default props => {
             {!opus.text &&
                 <Fragment>
                     <Container maxWidth="sm">
-                        <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" style={{width: "100%", height: "100%"}}/>
+                        <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={classes.silhouette}/>
                     </Container>
                     <Container maxWidth="sm" className={classes.assignmentContainer}>
                         <Paper elevation={10} className={classes.assignmentContainer}>
