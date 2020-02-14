@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
@@ -18,9 +18,9 @@ export default props => {
 
     // Build the UI
     return (
-        <Fragment>
+        <div className={classes.silhouette}>
             <Container maxWidth="sm">
-                <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={classes.silhouette}/>
+                <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={classes.silhouetteImage}/>
             </Container>
             { people.length > 2 &&
                 <Container maxWidth="sm" className={classes.assignmentContainer}>
@@ -47,6 +47,6 @@ export default props => {
                     </Paper>
                 </Container>
             }
-        </Fragment>
+        </div>
     );
 }

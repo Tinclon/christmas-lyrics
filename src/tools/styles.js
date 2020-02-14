@@ -55,7 +55,6 @@ export default drawerWidth => makeStyles(theme => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(3),
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -88,12 +87,20 @@ export default drawerWidth => makeStyles(theme => ({
         verticalAlign: 'text-bottom'
     },
     opusPaper: {
-        padding: '10px'
+        margin: theme.spacing(3),
+        paddingLeft: '16px',
+        paddingRight: '16px',
+        paddingBottom: '16px'
     },
     invisible: {
-        backgroundColor: theme.palette.grey.A400
+        backgroundColor: theme.palette.grey.A400,
+        paddingLeft: '0',
+        paddingRight: '0',
     },
     silhouette: {
+        margin: theme.spacing(3)
+    },
+    silhouetteImage: {
         opacity: '0.6',
         width: '100%',
         height: '100%'
