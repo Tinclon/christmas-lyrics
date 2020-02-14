@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChristmasLyrics from './app/ChristmasLyrics';
+import DataProvider from './app/DataProvider';
 
-ReactDOM.render(<ChristmasLyrics />, document.getElementById('root'));
+ReactDOM.render(<DataProvider />, document.getElementById('root'));
