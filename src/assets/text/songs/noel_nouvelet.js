@@ -1,6 +1,4 @@
 export default () => `
-Noël nouvelet
-
 Noël nouvelet, Noël chantons ici.
 Dévotes gens, crions à Dieu merci!
 Chantons Noël pour le Roi nouvelet, Noël!

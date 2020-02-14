@@ -1,6 +1,4 @@
 export default () => `
-Good King Wenceslas
-
 Good King Wenceslas looked out
 On the feast of Stephen
 When the snow lay round about

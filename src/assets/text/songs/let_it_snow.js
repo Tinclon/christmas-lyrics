@@ -1,6 +1,4 @@
 export default () => `
-Let it Snow
-
 Oh the weather outside is frightful
 But the fire is so delightful
 And since we've no place to go

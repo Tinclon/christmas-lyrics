@@ -1,6 +1,4 @@
 export default () => `
-Little Toy Trains
-
 Little toy trains, little toy tracks
 Little toy drums, comin' from a sack
 Carried by a man dressed in white and red

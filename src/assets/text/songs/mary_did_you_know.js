@@ -1,6 +1,4 @@
 export default () => `
-Mary, Did You Know?
-
 Mary, did you know that your baby boy would one day walk on water?
 Mary, did you know that your baby boy would save our sons and daughters?
 Did you know that your baby boy has come to make you new?

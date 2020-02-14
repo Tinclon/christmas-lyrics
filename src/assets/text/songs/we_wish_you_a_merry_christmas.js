@@ -1,7 +1,5 @@
 export default () => `
 We wish you a Merry Christmas
-
-We wish you a Merry Christmas
 We wish you a Merry Christmas
 We wish you a Merry Christmas
 And a Happy New Year

@@ -1,6 +1,4 @@
 export default () => `
-Far, Far Away on Judea’s Plains
-
 1. Far, far away on Judea’s plains,
 Shepherds of old heard the joyous strains:
 Glory to God,

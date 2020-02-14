@@ -1,6 +1,4 @@
 export default () => `
-Up on the Housetop
-
 Up on the housetop
 Reindeer pause,
 Out jumps good old Santa Claus

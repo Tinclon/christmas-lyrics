@@ -1,6 +1,4 @@
 export default () => `
-Jingle Bells
-
 Dashing through the snow
 On a one horse open sleigh
 O'er the fields we go,

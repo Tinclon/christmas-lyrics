@@ -1,6 +1,4 @@
 export default () => `
-Carol of the Bells
-
 Hark how the bells, 
 sweet silver bells, 
 all seem to say, 

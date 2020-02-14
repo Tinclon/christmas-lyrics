@@ -1,6 +1,4 @@
 export default () => `
-O Christmas Tree!
-
 O Christmas Tree! O Christmas Tree!
 Thy leaves are so unchanging;
 O Christmas Tree! O Christmas Tree!

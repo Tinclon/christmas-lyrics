@@ -1,6 +1,4 @@
 export default () => `
-I'm Getting Nuttin' For Christmas
-
 I broke my bat on Johnny's head;
 Somebody snitched on me.
 I hid a frog in sister's bed;

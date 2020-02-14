@@ -1,6 +1,4 @@
 export default () => `
-Santa Baby
-
 Santa baby, just slip a sable under the tree for me; 
 Been an awful good girl, Santa baby 
 and hurry down the chimney tonight

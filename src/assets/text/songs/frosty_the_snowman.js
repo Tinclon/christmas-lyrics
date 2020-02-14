@@ -1,6 +1,4 @@
 export default () => `
-Frosty the Snowman
-
 Frosty the snowman
 Was a jolly happy soul
 With a corncob pipe

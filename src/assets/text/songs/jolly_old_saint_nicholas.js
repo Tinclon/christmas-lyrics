@@ -1,6 +1,4 @@
 export default () => `
-Jolly old Saint Nicholas
-
 Jolly old Saint Nicholas,
 Lean your ear this way!
 Don't you tell a single soul

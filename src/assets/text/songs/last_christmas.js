@@ -1,6 +1,4 @@
 export default () => `
-Last Christmas
-
 [Chorus 2x]
 Last Christmas
 I gave you my heart

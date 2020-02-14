@@ -1,6 +1,4 @@
 export default () => `
-Christmas Bells
-
 1. Christmas bells are ringing.
 Hear what they say to you:
 Jesus is born in Bethlehem, in Bethlehem.

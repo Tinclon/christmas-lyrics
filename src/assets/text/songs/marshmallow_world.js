@@ -1,6 +1,4 @@
 export default () => `
-Marshmallow World
-
 It's a marshmallow world in the winter
 When the snow comes to cover the ground
 It's the time for play, it's a whipped cream day

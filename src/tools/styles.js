@@ -82,12 +82,21 @@ export default drawerWidth => makeStyles(theme => ({
     chip: {
         verticalAlign: 'text-bottom'
     },
+    opusPaper: {
+        padding: '10px',
+        invisible: {
+            backgroundColor: theme.palette.grey.A400
+        }
+    },
+    invisible: {
+        backgroundColor: theme.palette.grey.A400
+    },
     watermark: {
         position: "fixed",
         bottom: "0",
         right: "0",
         paddingRight: "10px",
-        opacity: "0.2",
-        fontSize: "128pt"
+        opacity: "0.3",
+        fontSize: "84pt"
     }
 }))();

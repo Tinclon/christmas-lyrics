@@ -1,6 +1,4 @@
 export default () => `
-Here Comes Santa Claus
-
 Here comes Santa Claus, here comes Santa Claus, 
 Right down Santa Claus lane
 Vixen and Blitzen and all his reindeer

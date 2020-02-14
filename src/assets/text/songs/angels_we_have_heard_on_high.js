@@ -1,6 +1,4 @@
 export default () => `
-Angels We Have Heard On High
-
 1. Angels we have heard on high
 Sweetly singing o’er the plains,
 And the mountains in reply

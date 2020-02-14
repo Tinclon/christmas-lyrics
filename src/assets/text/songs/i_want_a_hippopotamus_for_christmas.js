@@ -1,6 +1,4 @@
 export default () => `
-I Want A Hippopotamus For Christmas
-
 I want a hippopotamus for Christmas
 Only a hippopotamus will do
 Don't want a doll

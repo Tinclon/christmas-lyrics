@@ -1,6 +1,4 @@
 export default () => `
-Luke 2:8-11
-
 8 And there were in the same country shepherds abiding in the field, keeping watch over their flock by night.
 
 9 And, lo, the angel of the Lord came upon them, and the glory of the Lord shone round about them: and they were sore afraid.

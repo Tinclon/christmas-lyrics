@@ -1,6 +1,4 @@
 export default () => `
-Rudolph the Red Nosed Reindeer
-
 You know Dasher and Dancer
 And Prancer and Vixen
 Comet and Cupid

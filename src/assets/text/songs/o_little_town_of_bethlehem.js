@@ -1,6 +1,4 @@
 export default () => `
-O Little Town of Bethlehem,
-
 1. O little town of Bethlehem,
 How still we see thee lie.
 Above thy deep and dreamless sleep

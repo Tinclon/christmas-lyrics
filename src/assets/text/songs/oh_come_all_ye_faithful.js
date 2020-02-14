@@ -1,6 +1,4 @@
 export default () => `
-Oh, come, all ye faithful
-
 1. Oh, come, all ye faithful,
 Joyful and triumphant!
 Oh, come ye, oh come ye to Bethlehem.

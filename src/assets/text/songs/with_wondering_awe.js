@@ -1,6 +1,4 @@
 export default () => `
-With Wondering Awe
-
 1. With wond’ring awe the wisemen saw
 The star in heaven springing,
 And with delight, in peaceful night,

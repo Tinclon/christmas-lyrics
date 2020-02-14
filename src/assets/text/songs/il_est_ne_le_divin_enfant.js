@@ -1,6 +1,4 @@
 export default () => `
-Il est Né le Divin Enfant
-
 Il est né le divin enfant, 
 Jouez hautbois, résonnez musettes ! 
 Il est né le divin enfant, 

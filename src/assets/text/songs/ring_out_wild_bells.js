@@ -1,6 +1,4 @@
 export default () => `
-Ring Out, Wild Bells
-
 1. Ring out, wild bells, to the wild sky,
 The flying cloud, the frosty light.
 The year is dying in the night;

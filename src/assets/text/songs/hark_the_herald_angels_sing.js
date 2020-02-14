@@ -1,6 +1,4 @@
 export default () => `
-Hark! The Herald Angels Sing
-
 1. Hark! the herald angels sing
 Glory to the newborn King!
 Peace on earth and mercy mild,

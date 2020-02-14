@@ -1,6 +1,4 @@
 export default () => `
-Luke 1:26-33
-
 26 And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,
 
 27 To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin’s name was Mary.

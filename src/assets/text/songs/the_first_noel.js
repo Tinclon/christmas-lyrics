@@ -1,6 +1,4 @@
 export default () => `
-The First Noel
-
 1. The first Noel the angel did say
 Was to certain poor shepherds in fields as they lay,
 In fields where they lay keeping their sheep

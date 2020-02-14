@@ -1,7 +1,5 @@
 export default () => `
 O come, O come, Emmanuel
-
-O come, O come, Emmanuel
 And ransom captive Israel
 That mourns in lonely exile here
 Until the Son of God appear

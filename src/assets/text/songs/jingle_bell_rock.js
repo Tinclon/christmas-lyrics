@@ -1,6 +1,4 @@
 export default () => `
-Jingle Bell Rock
-
 Jingle bell, jingle bell, jingle bell rock
 Jingle bells swing and jingle bells ring
 Snowing and blowing up bushels of fun

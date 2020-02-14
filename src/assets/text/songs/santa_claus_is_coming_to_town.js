@@ -1,6 +1,4 @@
 export default () => `
-Santa Claus is Coming to Town
-
 You better watch out
 You better not cry
 Better not pout

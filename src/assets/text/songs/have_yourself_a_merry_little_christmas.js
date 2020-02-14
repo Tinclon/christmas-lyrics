@@ -1,6 +1,4 @@
 export default () => `
-Have Yourself a Merry Little Christmas
-
 Have yourself a merry little Christmas
 Let your heart be light
 From now on

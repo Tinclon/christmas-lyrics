@@ -1,6 +1,4 @@
 export default () => `
-What Child Is This
-
 1. What Child is this who, laid to rest
 On Mary's lap is sleeping?
 Whom Angels greet with anthems sweet,

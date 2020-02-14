@@ -1,6 +1,4 @@
 export default () => `
-O Holy Night
-
 O holy night the stars are brightly shining
 It is the night of our dear Saviour’s birth
 Long lay the world in sin and error pining

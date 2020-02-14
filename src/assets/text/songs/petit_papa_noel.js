@@ -1,6 +1,4 @@
 export default () => `
-Petit Papa Noël
-
 C'est la belle nuit de Noël 
 La neige étend son manteau blanc 
 Et les yeux levés vers le ciel 

@@ -1,6 +1,4 @@
 export default () => `
-Silent night!
-
 1. Silent night! Holy night!
 All is calm, all is bright
 Round yon virgin mother and Child.

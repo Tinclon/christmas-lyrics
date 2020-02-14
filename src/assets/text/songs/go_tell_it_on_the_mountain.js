@@ -1,6 +1,4 @@
 export default () => `
-Go, Tell It On The Mountain
-
 While shepherds kept their watching
 Over silent flocks by night,
 Behold throughout the heavens,

@@ -1,6 +1,4 @@
 export default () => `
-Sing we now of Christmas (Noël Nouvelet)
-
 Sing we now of Christmas
 Sing we all Noel
 Of the Lord and Savior

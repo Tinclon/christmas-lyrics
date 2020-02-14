@@ -1,6 +1,4 @@
 export default () => `
-Stars Were Gleaming
-
 1. Stars were gleaming, shepherds dreaming;
 And the night was dark and chill.
 Angels’ story rang with glory;

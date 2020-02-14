@@ -1,6 +1,4 @@
 export default () => `
-White Christmas
-
 I'm dreaming of a White Christmas
 Just like the ones I used to know
 Where the treetops glisten

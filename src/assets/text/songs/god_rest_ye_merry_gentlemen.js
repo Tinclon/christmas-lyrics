@@ -1,6 +1,4 @@
 export default () => `
-God Rest Ye Merry, Gentlemen
-
 God rest ye merry, gentlemen
 Let nothing you dismay
 Remember, Christ, our Saviour

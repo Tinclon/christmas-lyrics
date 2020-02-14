@@ -1,6 +1,4 @@
 export default () => `
-Mele Kalikimaka
-
 Mele Kalikimaka is the thing to say on a bright Hawaiian Christmas day
 That's the island greeting that we send to you
 From the land where palm trees sway

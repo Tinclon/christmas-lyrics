@@ -1,6 +1,4 @@
 export default () => `
-Silver Bells
-
 Silver Bells, Silver Bells
 It's Christmas time in the city
 Ring-a-ling, hear them ring

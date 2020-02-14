@@ -1,6 +1,4 @@
 export default () => `
-Sleigh Ride
-
 Just hear those sleigh bells jingle-ing
 Ring ting tingle-ing too
 Come on, it's lovely weather

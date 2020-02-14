@@ -1,6 +1,4 @@
 export default () => `
-Luke 17:12-19
-
 12 And as he entered into a certain village, there met him ten men that were lepers, which stood afar off:
 
 13 And they lifted up their voices, and said, Jesus, Master, have mercy on us.

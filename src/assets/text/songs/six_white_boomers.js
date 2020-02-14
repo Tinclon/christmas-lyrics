@@ -1,6 +1,4 @@
 export default () => `
-Six White Boomers
-
 Early on one Christmas Day, a joey kangaroo 
 Was far from home and lost in a great big zoo 
 "Mummy, where's my mummy? They've taken her away" 

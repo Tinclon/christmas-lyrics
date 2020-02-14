@@ -1,6 +1,4 @@
 export default () => `
-Deck the Halls
-
 Deck the halls with boughs of holly,
 Fa la la la la, la la la la!
 

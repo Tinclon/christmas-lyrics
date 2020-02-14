@@ -1,6 +1,4 @@
 export default () => `
-I Saw Three Ships
-
 I saw three ships come sailing in
 On Christmas Day, on Christmas Day;
 I saw three ships come sailing in

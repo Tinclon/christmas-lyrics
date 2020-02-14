@@ -1,6 +1,4 @@
 export default () => `
-It Came Upon the Midnight Clear
-
 1. It came upon the midnight clear,
 That glorious song of old,
 From angels bending near the earth

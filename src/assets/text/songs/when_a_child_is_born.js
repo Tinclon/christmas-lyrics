@@ -1,6 +1,4 @@
 export default () => `
-When A Child Is Born
-
 Mmm-mmm-mmm-mmm, mmm-mmm-mmm-mmm-mmm
 Mmm-mmm-mmm-mmm, mmm-mmm-mmm-mmm-mmm
 Mmm-mmm-mmm-mmm-mmm, mmm-mmm-mmm-mmm-mmm

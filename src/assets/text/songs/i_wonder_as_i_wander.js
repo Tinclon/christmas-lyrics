@@ -1,6 +1,4 @@
 export default () => `
-I Wonder As I Wander
-
 I wonder as I wander out under the sky
 How Jesus the Saviour did come for to die
 For poor on'ry people like you and like I;

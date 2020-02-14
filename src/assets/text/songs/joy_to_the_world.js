@@ -1,6 +1,4 @@
 export default () => `
-Joy to the world
-
 1. Joy to the world, the Lord is come;
 Let earth receive her King!
 Let ev’ry heart prepare him room,

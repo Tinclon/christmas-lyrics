@@ -1,6 +1,4 @@
 export default () => `
-Away in a manger
-
 1. Away in a manger, no crib for his bed,
 The little Lord Jesus laid down his sweet head;
 The stars in the heavens looked down where he lay,

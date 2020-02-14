@@ -1,6 +1,4 @@
 export default () => `
-The Little Drummer Boy
-
 Come they told me
 Pa rum pum pum pum
 A new born King to see

@@ -1,6 +1,4 @@
 export default () => `
-I Heard the Bells on Christmas Day
-
 1. I heard the bells on Christmas day
 Their old familiar carols play,
 And wild and sweet the words repeat

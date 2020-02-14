@@ -1,6 +1,4 @@
 export default () => `
-Rockin' Around the Christmas Tree
-
 Rocking around the Christmas Tree
 at the Christmas party hop
 Mistletoe hung where you can see

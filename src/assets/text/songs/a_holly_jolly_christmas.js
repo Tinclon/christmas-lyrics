@@ -1,6 +1,4 @@
 export default () => `
-A Holly Jolly Christmas
-
 Have a holly, jolly Christmas;
 It's the best time of the year
 I don't know if there'll be snow

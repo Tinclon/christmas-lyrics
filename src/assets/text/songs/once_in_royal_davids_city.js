@@ -1,6 +1,4 @@
 export default () => `
-Once in royal David’s city
-
 1. Once in royal David’s city
 Stood a lowly cattle shed,
 Where a mother laid her baby

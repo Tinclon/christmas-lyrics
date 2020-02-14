@@ -1,6 +1,4 @@
 export default () => `
-The Twelve Days of Christmas
-
 On the first day of Christmas
 my true love sent to me:
 A Partridge in a Pear Tree

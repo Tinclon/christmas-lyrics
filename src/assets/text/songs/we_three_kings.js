@@ -1,6 +1,4 @@
 export default () => `
-We Three Kings
-
 We three kings of Orient are
 Bearing gifts we traverse afar
 Field and fountain, moor and mountain

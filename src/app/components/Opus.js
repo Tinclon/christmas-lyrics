@@ -33,13 +33,15 @@ export default props => {
                          <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
                 }
             </div>
-            <Typography paragraph>
-                {
-                    opus.text
-                        && opus.text.split("\n").reduce((acc, curr) =>
-                            <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
-                }
-            </Typography>
+            <Paper elevation={opus.scripture && 10 || 0} className={clsx(classes.opusPaper, {[classes.invisible]: opus.lyrics})}>
+                <Typography paragraph>
+                    {
+                        opus.text
+                            && opus.text.split("\n").reduce((acc, curr) =>
+                                <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
+                    }
+                </Typography>
+            </Paper>
             {!opus.text &&
                 <Fragment>
                     <Container maxWidth="sm">

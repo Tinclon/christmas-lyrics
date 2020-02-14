@@ -1,6 +1,4 @@
 export default () => `
-Matthew 2:7-10
-
 7 Then Herod, when he had privily called the wise men, inquired of them diligently what time the star appeared.
 
 8 And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also.

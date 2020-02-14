@@ -1,7 +1,5 @@
 export default () => `
 Feliz navidad
-
-Feliz navidad
 Feliz navidad
 Feliz navidad, prospero año y felicidad
 

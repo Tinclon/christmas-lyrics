@@ -1,6 +1,4 @@
 export default () => `
-Do You Hear What I Hear?
-
 Said the night wind to the little lamb,
 do you see what I see
 Way up in the sky, little lamb,
