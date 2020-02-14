@@ -50,7 +50,7 @@ export default () => ([
     { title: "Silent Night",                           lyrics: lyrics.silent_night()                           },
     { title: "Silver Bells",                           lyrics: lyrics.silver_bells()                           , watermark: "🔔" },
     { title: "Sing We Now of Christmas",               lyrics: lyrics.sing_we_now_of_christmas()               },
-    { title: "Six White Boomers",                      lyrics: lyrics.six_white_boomers()                      , watermark: "🦘" },
+    { title: "Six White Boomers",                      lyrics: lyrics.six_white_boomers()                      , watermark: "🦘🦘\n🦘🦘\n🦘🦘" },
     { title: "Sleigh Ride",                            lyrics: lyrics.sleigh_ride()                            , watermark: "🛷" },
     { title: "Stars Were Gleaming",                    lyrics: lyrics.stars_were_gleaming()                    , watermark: "✨️" },
     { title: "The First Noel",                         lyrics: lyrics.the_first_noel()                         },
