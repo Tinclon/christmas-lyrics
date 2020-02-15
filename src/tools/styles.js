@@ -69,8 +69,8 @@ export default drawerWidth => makeStyles(theme => ({
         marginLeft: 0,
     },
     contentFill: {
-        height: '100%',
-        minHeight: 'calc(100vh - 170px)'
+        height: 'calc(100% - 40px)',
+        minHeight: 'calc(100vh - 140px)'
     },
     assignmentContainer: {
         padding: '10px'
