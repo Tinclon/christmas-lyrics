@@ -13,13 +13,13 @@ export default props => {
     // Build the UI
     return (
         <Fragment>
-            <div className={classes.watermark}>
-                {
-                    opus.watermark
-                        && opus.watermark.split("\n").reduce((acc, curr) =>
-                         <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
-                }
-            </div>
+            {
+                opus.watermark &&
+                    <div className={classes.watermark} style={{fontSize: `${300 - (opus.watermark.split("\n").length * 70)}pt`}}>
+                        { opus.watermark.split("\n").reduce((acc, curr) =>
+                            <Fragment>{acc}<br/>{curr.trim()}</Fragment>) }
+                    </div>
+            }
             <Paper elevation={(opus.scripture && 10) || 0} className={clsx(classes.opusPaper, {[classes.invisible]: !opus.scripture})}>
                 <Typography paragraph>
                     {

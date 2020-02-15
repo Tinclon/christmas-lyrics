@@ -24,8 +24,9 @@ export default () => ({
         { name: "Camary"   },
         { name: "Rayce"    },
         { name: "Zync"     },
-        { name: "Zuuz"     },
+        { name: "ZUUSS"    },
         { name: "Galt"     },
+        { name: "Bentz"    },
         { name: "Søv"      }
     ],
     Lowry_mm: [

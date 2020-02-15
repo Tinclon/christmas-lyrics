@@ -42,6 +42,7 @@ export default props => {
                         { people.length > 6 &&
                             <Box>
                                 <Assignment offset={offset + 6} icon={"✨"} text={"celebrate"} {...props} />
+                                <Assignment offset={offset + 7} icon={"✨"} text={"celebrate"} {...props} />
                             </Box>
                         }
                     </Paper>
