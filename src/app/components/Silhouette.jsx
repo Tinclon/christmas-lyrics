@@ -35,7 +35,7 @@ export default props => {
                         </Box>
                         { people.length > 2 &&
                             <Box>
-                                <Assignment offset={offset + 4} icon={"🎵"} text={"song"} {...props} />
+                                <Assignment offset={offset + 4} icon={"🎶"} text={"song"} {...props} />
                                 <Assignment offset={offset + 5} icon={"🕯"} text={"candle"} {...props} />
                             </Box>
                         }
