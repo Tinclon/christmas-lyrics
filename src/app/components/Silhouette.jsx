@@ -33,12 +33,10 @@ export default props => {
                             <Assignment offset={offset + 2} icon={"📖"} text={"scripture"} {...props} />
                             <Assignment offset={offset + 3} icon={"🙏"} text={"prayer"} {...props} />
                         </Box>
-                        { people.length > 2 &&
-                            <Box>
-                                <Assignment offset={offset + 4} icon={"🎶"} text={"song"} {...props} />
-                                <Assignment offset={offset + 5} icon={"🕯"} text={"candle"} {...props} />
-                            </Box>
-                        }
+                        <Box>
+                            <Assignment offset={offset + 4} icon={"🎶"} text={"song"} {...props} />
+                            <Assignment offset={offset + 5} icon={"🕯"} text={"candle"} {...props} />
+                        </Box>
                         { people.length > 6 &&
                             <Box>
                                 <Assignment offset={offset + 6} icon={"✨"} text={"celebrate"} {...props} />
