@@ -51,7 +51,7 @@ export default props => {
                     </div>
                     <div className={classes.drawerSubtitle}>
                         <IconButton
-                            onClick={handleDateChange(parseInt(date) - 1)} >
+                            onClick={handleDateChange(date - 1)} >
                             <ChevronLeftIcon />
                         </IconButton>
                         <Button
@@ -60,7 +60,7 @@ export default props => {
                             {(scripture.ref && `December ${date}: ${scripture.ref}`) || "See you next December!"}
                         </Button>
                         <IconButton
-                            onClick={handleDateChange(parseInt(date) + 1)}
+                            onClick={handleDateChange(date + 1)}
                             style={{float: "right"}} >
                             <ChevronRightIcon />
                         </IconButton>

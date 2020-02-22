@@ -23,7 +23,7 @@ export default props => {
     // Create hooks
     const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(props.songs);
-    const [date, setDate] = React.useState(`${now.getDate()}`);
+    const [date, setDate] = React.useState(now.getDate());
     const [opusReference, setOpusReference] = React.useState("");
 
     // Create effects
@@ -44,14 +44,14 @@ export default props => {
     // Find the appropriate data
     const year = now.getFullYear();
     const scripture = scriptures.find(scripture => scripture.date === date) || {};
-    const opus = songs.find(song => song.title === opusReference) || scriptures.find(scripture => scripture.date === opusReference) || {};
+    const opus = songs.find(song => song.title === opusReference) || scriptures.find(scripture => scripture.date === parseInt(opusReference)) || {};
     opus.title = opus.title || opus.ref;
     opus.text = opus.lyrics || opus.scripture;
 
     // Set up handlers
     const handleDrawerOpen = () => setDrawerOpen(true);
     const handleDrawerClose = () => setDrawerOpen(false);
-    const handleDateChange = date => () => setDate(`${((date % 24 + 24) % 24) || 24}`);
+    const handleDateChange = date => () => setDate(((date % 24 + 24) % 24) || 24);
     const handleChooseOpus = reference => () => (window.location.hash = encodeURI(reference)) && handleDrawerClose();
     const toggleSungSong = song => () => {
         song.sung = song.sung === "0" ? "1" : "0";

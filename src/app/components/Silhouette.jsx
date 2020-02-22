@@ -14,7 +14,7 @@ export default props => {
         people
     } = props;
 
-    const offset = year - parseInt(date);
+    const offset = year - date;
 
     // Build the UI
     return (
