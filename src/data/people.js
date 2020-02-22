@@ -12,12 +12,12 @@ export default () => ({
         { name: "Kadi"     }
     ],
     Nielsen_ck: [
-        { name: "🟡 Clinton 🟡" },
-        { name: "Katrina"       },
-        { name: "Talitha"       },
-        { name: "Lukas"         },
-        { name: "Annaliess"     },
-        { name: "Savannah"      }
+        { name: "🟡 Clinton" },
+        { name: "Katrina"    },
+        { name: "Talitha"    },
+        { name: "Lukas"      },
+        { name: "Annaliess"  },
+        { name: "Savannah"   }
     ],
     Baker_jc: [
         { name: "Jeremy"   },
