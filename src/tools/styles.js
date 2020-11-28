@@ -98,11 +98,14 @@ export default drawerWidth => makeStyles(theme => ({
         paddingRight: '0',
     },
     silhouette: {
-        margin: theme.spacing(3),
+        padding: `${theme.spacing(3)}px ${theme.spacing(3)}px 0 ${theme.spacing(3)}px`,
         display: 'grid',
-        height: 'calc(100vh - 115px)',
+        height: 'calc(100vh - 64px)',
         alignItems: 'stretch',
         gridTemplateRows: 'min-content min-content auto'
+    },
+    silhouetteImageContainer: {
+        textAlign: 'center'
     },
     silhouetteImage: {
         opacity: '0.6',
@@ -129,6 +132,7 @@ export default drawerWidth => makeStyles(theme => ({
         display: 'grid',
         textAlign: 'right',
         alignContent: 'flex-end',
-        paddingTop: '24px'
+        paddingTop: '24px',
+        paddingBottom: '24px'
     }
 }))();

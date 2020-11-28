@@ -20,8 +20,8 @@ export default props => {
     // Build the UI
     return (
         <div className={classes.silhouette}>
-            <Container maxWidth="sm">
-                <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={classes.silhouetteImage}/>
+            <Container maxWidth="sm" className={classes.silhouetteImageContainer}>
+                <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={`silhouetteImage ${classes.silhouetteImage}`}/>
             </Container>
             { people.length > 2 &&
                 <Container maxWidth="sm" className={classes.assignmentContainer}>
@@ -45,7 +45,8 @@ export default props => {
                             </Box>
                         }
                     </Paper>
-                </Container>
+                </Container> ||
+                <div/>
             }
             <footer className={classes.newFamily} onClick={handleNewFamily}>
                 I want a new family ...
