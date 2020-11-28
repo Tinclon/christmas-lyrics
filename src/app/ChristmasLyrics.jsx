@@ -62,6 +62,7 @@ export default props => {
 
     props = {
         ...props,
+        handleNewFamily,
         year, date, songs, scripture, opus, drawerOpen,
         handleDrawerOpen, handleDrawerClose, handleDateChange, handleChooseOpus, toggleSungSong,
     };
@@ -83,9 +84,6 @@ export default props => {
                                     <div className={classes.drawerHeader} />
                                     <Silhouette {...props} />
                                 </div>
-                                <footer className={classes.newFamily} onClick={handleNewFamily}>
-                                    I want a new family ...
-                                </footer>
                             </Fragment>
                             )
                         || (

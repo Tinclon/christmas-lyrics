@@ -98,7 +98,11 @@ export default drawerWidth => makeStyles(theme => ({
         paddingRight: '0',
     },
     silhouette: {
-        margin: theme.spacing(3)
+        margin: theme.spacing(3),
+        display: 'grid',
+        height: 'calc(100vh - 115px)',
+        alignItems: 'stretch',
+        gridTemplateRows: 'min-content min-content auto'
     },
     silhouetteImage: {
         opacity: '0.6',
@@ -122,9 +126,9 @@ export default drawerWidth => makeStyles(theme => ({
     newFamily: {
         cursor: 'pointer',
         color: 'black',
-        fontSize: '8pt',
-        paddingRight: '8px',
-        paddingBottom: '8px',
-        textAlign: 'right'
+        display: 'grid',
+        textAlign: 'right',
+        alignContent: 'flex-end',
+        paddingTop: '24px'
     }
 }))();
