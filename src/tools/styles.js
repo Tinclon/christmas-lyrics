@@ -117,7 +117,7 @@ export default drawerWidth => makeStyles(theme => ({
         bottom: '0',
         right: '10px',
         opacity: '0.3',
-        fontSize: '84pt'
+        fontSize: '64pt'
     },
     family: {
         margin: '40px',
