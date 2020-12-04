@@ -51,13 +51,17 @@ export default props => {
                     </Typography>
                     <TreeView
                         className={classes.familyTree}
-                        expanded={["Nielsen_pm"]}
+                        expanded={["Nielsen_pm", "Fraser_j"]}
                     >
                         <StyledTreeItem nodeId="Nielsen_pm" label="Nielsen" onClick={handleSetFamily("Nielsen_pm")} >
                             <StyledTreeItem nodeId="Creighton_sl" label="Creighton" onClick={handleSetFamily("Creighton_sl")} />
                             <StyledTreeItem nodeId="Nielsen_ck" label="Nielsen" onClick={handleSetFamily("Nielsen_ck")} />
                             <StyledTreeItem nodeId="Baker_jc" label="Baker" onClick={handleSetFamily("Baker_jc")} />
                             <StyledTreeItem nodeId="Lowry_mm" label="Lowry" onClick={handleSetFamily("Lowry_mm")} />
+                        </StyledTreeItem>
+                        <div style={{minHeight: "50px"}}/>
+                        <StyledTreeItem nodeId="Fraser_j" label="Fraser" onClick={handleSetFamily("Fraser_j")} >
+                            <StyledTreeItem nodeId="Williams_rj" label="Williams" onClick={handleSetFamily("Williams_rj")} />
                         </StyledTreeItem>
                     </TreeView>
                 </Container>

@@ -121,7 +121,7 @@ export default drawerWidth => makeStyles(theme => ({
     },
     family: {
         margin: '40px',
-        paddingTop: '60px'
+        paddingTop: '20px'
     },
     familyTree: {
         paddingTop: '40px'

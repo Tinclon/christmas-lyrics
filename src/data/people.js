@@ -36,5 +36,12 @@ export default () => ({
         { name: "Sterling" },
         { name: "Dane"     },
         { name: "Freyja"   }
+    ],
+    Fraser_j: [
+        { name: "Joyce"    }
+    ],
+    Williams_rj: [
+        { name: "Rod"      },
+        { name: "Jodi"     }
     ]
 });
