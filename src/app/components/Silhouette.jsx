@@ -21,9 +21,9 @@ export default props => {
     return (
         <div className={classes.silhouette}>
             <Container maxWidth="sm" className={classes.silhouetteImageContainer}>
-                <img src={process.env.PUBLIC_URL + "/nativity-silhouette.png"} alt="Nativity" className={`silhouetteImage ${classes.silhouetteImage}`}/>
+                <img src={`${process.env.PUBLIC_URL}/nativity-silhouette.png`} alt="Nativity" className={`silhouetteImage ${classes.silhouetteImage}`}/>
             </Container>
-            { people.length > 2 &&
+            { (people.length > 2 &&
                 <Container maxWidth="sm" className={classes.assignmentContainer}>
                     <Paper elevation={10} className={classes.assignmentContainer}>
                         <Box>
@@ -45,7 +45,7 @@ export default props => {
                             </Box>
                         }
                     </Paper>
-                </Container> ||
+                </Container>) ||
                 <div/>
             }
             <footer className={classes.newFamily} onClick={handleNewFamily}>
