@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/christmas-lyrics/precache-manifest.1a046059a56dc6aad4cdc25d8f9280dd.js"
+  "/christmas-lyrics/precache-manifest.0bf8046ba5452611ee069ee145f0b006.js"
 );
 
 self.addEventListener('message', (event) => {
