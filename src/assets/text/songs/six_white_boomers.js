@@ -8,6 +8,10 @@ Up beside the bag of toys, little Joey hopped
 But they hadn't gone far when Santa stopped 
 Unharnessed all the reindeer and Joey wondered why 
 Then he heard a far off booming in the sky. 
+
+Boom, Boom, Boom
+Boom, Boom, Boom
+
 Chorus: 
 Six white boomers, snow white boomers 
 Racing Santa Claus through the blazing sun 
