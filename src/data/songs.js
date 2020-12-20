@@ -42,6 +42,7 @@ export default () => ([
     { title: "Oh, Come, All Ye Faithful",              lyrics: lyrics.oh_come_all_ye_faithful()                },
     { title: "Once in Royal David’s City",             lyrics: lyrics.once_in_royal_davids_city()              },
     { title: "Petit Papa Noël",                        lyrics: lyrics.petit_papa_noel()                        , watermark: "🎅" },
+    { title: "Picture a Christmas",                    lyrics: lyrics.picture_a_christmas()                    },
     { title: "Ring Out, Wild Bells",                   lyrics: lyrics.ring_out_wild_bells()                    , watermark: "🔔" },
     { title: "Rocking Around the Christmas Tree",      lyrics: lyrics.rocking_around_the_christmas_tree()      , watermark: "🎄️" },
     { title: "Rudolph the Red Nosed Reindeer",         lyrics: lyrics.rudolph_the_red_nosed_reindeer()         , watermark: "🦌" },

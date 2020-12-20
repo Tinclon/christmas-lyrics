@@ -9,8 +9,7 @@ Mary, did you know that your baby boy will calm the storm with his hand?
 Did you know that your baby boy has walked where angels trod?
 When you kiss your little baby, you kiss the face of God.
 
-Mary, did you know? Mary, did you know? Mary, did you know?..
-Mary, did you know? Mary, did you know? Mary, did you know?..
+Mary, did you know? ...
 
 The blind will see, the deaf will hear, the dead will live again.
 The lame will leap, the dumb will speak, the praises of the lamb!
@@ -20,6 +19,5 @@ Mary, did you know that your baby boy would one day rule the nations?
 Did you know that your baby boy is heaven's perfect Lamb?
 That sleeping child you're holding is the great I am.
 
-Mary, did you know? Mary, did you know? Mary, did you know?..
-Mary, did you know?
+Mary, did you know? 
 `

@@ -39,6 +39,7 @@ export {default as o_little_town_of_bethlehem}             from './text/songs/o_
 export {default as oh_come_all_ye_faithful}                from './text/songs/oh_come_all_ye_faithful'
 export {default as once_in_royal_davids_city}              from './text/songs/once_in_royal_davids_city'
 export {default as petit_papa_noel}                        from './text/songs/petit_papa_noel'
+export {default as picture_a_christmas}                    from './text/songs/picture_a_christmas'
 export {default as ring_out_wild_bells}                    from './text/songs/ring_out_wild_bells'
 export {default as rocking_around_the_christmas_tree}      from './text/songs/rocking_around_the_christmas_tree'
 export {default as rudolph_the_red_nosed_reindeer}         from './text/songs/rudolph_the_red_nosed_reindeer'
