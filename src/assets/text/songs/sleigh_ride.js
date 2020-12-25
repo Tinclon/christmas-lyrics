@@ -40,4 +40,14 @@ When they pass around the coffee and the pumpkin pie
 It'll nearly be like a picture print by Currier and Ives
 These wonderful things are the things
 We remember all through our lives
+
+Just hear those sleigh bells jingle-ing
+Ring ting tingle-ing too
+Come on, it's lovely weather
+For a sleigh ride together with you
+
+Outside the snow is falling
+And friends are calling "Yoo Hoo"
+Come on, it's lovely weather
+For a sleigh ride together with you
 `
