@@ -14,6 +14,7 @@ export default () => ([
     { title: "Go, Tell It on the Mountain",            lyrics: lyrics.go_tell_it_on_the_mountain()             , watermark: "🏔" },
     { title: "God Rest Ye Merry, Gentlemen",           lyrics: lyrics.god_rest_ye_merry_gentlemen()            },
     { title: "Good King Wenceslas",                    lyrics: lyrics.good_king_wenceslas()                    , watermark: "👑" },
+    { title: "Guard Him, Joseph",                      lyrics: lyrics.guard_him_joseph()                       },
     { title: "Hark! The Herald Angels Sing",           lyrics: lyrics.hark_the_herald_angels_sing()            },
     { title: "Have Yourself a Merry Little Christmas", lyrics: lyrics.have_yourself_a_merry_little_christmas() },
     { title: "Here Comes Santa Claus",                 lyrics: lyrics.here_comes_santa_claus()                 , watermark: "🎅" },
