@@ -7,7 +7,7 @@ I wait for it the whole year round.
 Those are marshmallow clouds being friendly
 In the arms of the evergreen trees
 And the sun is red like a pumpkin head
-It's shining so your nose wont freeze.
+It's shining so your nose won't freeze.
 
 The world is your snowball, see how it grows
 That's how it goes whenever it snows
@@ -27,5 +27,5 @@ I wait for it the whole year round.
 Those are marshmallow clouds being friendly
 In the arms of the evergreen trees
 And the sun is red like a pumpkin head
-It's shining so your nose wont freeze.
+It's shining so your nose won't freeze.
 `
