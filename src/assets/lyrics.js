@@ -11,6 +11,7 @@ export {default as frosty_the_snowman}                     from './text/songs/fr
 export {default as go_tell_it_on_the_mountain}             from './text/songs/go_tell_it_on_the_mountain'
 export {default as god_rest_ye_merry_gentlemen}            from './text/songs/god_rest_ye_merry_gentlemen'
 export {default as good_king_wenceslas}                    from './text/songs/good_king_wenceslas'
+export {default as guard_him_joseph}                       from './text/songs/guard_him_joseph'
 export {default as hark_the_herald_angels_sing}            from './text/songs/hark_the_herald_angels_sing'
 export {default as have_yourself_a_merry_little_christmas} from './text/songs/have_yourself_a_merry_little_christmas'
 export {default as here_comes_santa_claus}                 from './text/songs/here_comes_santa_claus'
