@@ -15,7 +15,7 @@ Watching o'er him till the dawn,
 Bid the shepherds enter meekly;
 stand in wonder; gaze in awe.
 
-Trim thy lamp and shield they candle,
+Trim thy lamp and shield the candle,
 See they burn all through the night,
 For thou hast within thy keeping
 Christ, the everlasting Light.
