@@ -1,23 +1,29 @@
 export default () => `
-Rocking around the Christmas Tree
-at the Christmas party hop
+Rockin' around the Christmas tree
+At the Christmas party hop
 Mistletoe hung where you can see
-Ev'ry couple tries to stop
+Every couple tries to stop
 
-You will get a sentimental feeling When you hear voices singing
-"Let's be jolly; Deck the halls with boughs of holly" Rocking around the Christmas Tree
-Have a happy holiday
-Everyone's dancing merrily
-In a new old fashioned way
-
-Rocking around the Christmas Tree
-Let the Christmas Spirit ring
+Rockin' around the Christmas tree
+Let the Christmas spirit ring
 Later we'll have some pumpkin pie
-and we'll do some caroling
+And we'll do some caroling
 
-You will get a sentimental feeling When you hear voices singing
-"Let's be jolly; Deck the halls with boughs of holly" Rocking around the Christmas Tree
+You will get a sentimental feeling when you hear
+Voices singing, let's be jolly
+Deck the halls with boughs of holly
+
+Rockin' around the Christmas tree
 Have a happy holiday
-Everyone's dancing merrily
-In a new old fashioned way
+Everyone dancin' merrily
+In the new old-fashioned way
+
+You will get a sentimental feeling when you hear
+Voices singing, let's be jolly
+Deck the halls with boughs of holly
+
+Rockin' around the Christmas tree
+Have a happy holiday
+Everyone dancin' merrily
+In the new old-fashioned way
 `
