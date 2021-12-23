@@ -6,7 +6,7 @@ Pa rum pum pum pum
 
 Our finest gifts we bring
 Pa rum pum pum pum
-To lay before the kIng
+To lay before the King
 Pa rum pum pum pum,
 rum pum pum pum,
 rum pum pum pum
