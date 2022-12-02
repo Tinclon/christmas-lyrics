@@ -15,7 +15,7 @@ export default () => ({
         { name: "🟡 Clinton" },
         { name: "Katrina"    },
         { name: "Talitha"    },
-        { name: "Lukas"      },
+        { name: "🫥 Lukas"   },
         { name: "Annaliess"  },
         { name: "Savannah"   }
     ],
