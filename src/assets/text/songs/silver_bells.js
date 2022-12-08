@@ -1,9 +1,4 @@
 export default () => `
-Silver Bells, Silver Bells
-It's Christmas time in the city
-Ring-a-ling, hear them ring
-Soon it will be Christmas Day
-
 City sidewalks
 Busy sidewalks
 Dressed in holiday style
@@ -34,15 +29,6 @@ This bustle you'll here
 Silver Bells, Silver Bells
 It's Christmas time in the city
 Ring-a-ling, hear them sing
-Soon it will be Christmas Day
-
-Silver Bells, Silver Bells
-It's Christmas time in the city
-Ring-a-ling, hear them sing
-Soon it will be Christmas Day
-
-Soon it will be Christmas Day
-Soon it will be Christmas Day
 Soon it will be Christmas Day
 
 Soon it will be Christmas Day
