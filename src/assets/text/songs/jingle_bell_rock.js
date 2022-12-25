@@ -11,9 +11,9 @@ In the frosty air.
 
 What a bright time, it's the right time
 To rock the night away
-
 Jingle bell time is a swell time
 To go gliding in a one-horse sleigh
+
 Giddy-up jingle horse, pick up your feet
 Jingle around the clock
 

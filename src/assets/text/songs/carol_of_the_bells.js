@@ -24,8 +24,10 @@ raising the sound,
 o'er hill and dale, 
 telling their tale.
 
-Gaily they ri-ing, while people si-ing 
-Songs of good che-er, Christmas is here.
+Gaily they ri-ing,
+while people si-ing 
+Songs of good che-er,
+Christmas is here.
 
 Merry, Merry, Merry, Merry Christmas, 
 Merry, Merry, Merry, Merry Christmas.

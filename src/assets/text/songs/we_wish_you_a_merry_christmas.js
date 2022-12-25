@@ -3,6 +3,7 @@ We wish you a Merry Christmas
 We wish you a Merry Christmas
 We wish you a Merry Christmas
 And a Happy New Year
+
 Good tidings we bring
 To you and your kin
 We wish you a Merry Christmas

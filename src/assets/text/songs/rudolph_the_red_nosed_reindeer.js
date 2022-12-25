@@ -14,7 +14,6 @@ All of the other reindeer
 Used to laugh and call him names
 They never let poor Rudolph
 Play in any reindeer games
- 
 
 Then one foggy Christmas Eve
 Santa came to say

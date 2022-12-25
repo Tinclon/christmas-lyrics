@@ -9,9 +9,4 @@ I'm dreaming of a white Christmas
 With every Christmas card I write
 May your days be merry and bright
 And may all your Christmases be white.
-
-I'm dreaming of a white Christmas
-With every Christmas card I write
-May your days be merry and bright
-And may all your Christmases be white.
 `

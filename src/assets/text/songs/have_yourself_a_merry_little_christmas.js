@@ -1,12 +1,11 @@
 export default () => `
 Have yourself a merry little Christmas
 Let your heart be light
-From now on
-our troubles will be out of sight 
+From now on our troubles will be out of sight
+ 
 Have yourself a merry little Christmas
 Make the Yule-tide gay 
-From now on 
-our troubles will be miles away
+From now on our troubles will be miles away
 
 Here were are as in olden days
 happy golden days of yore

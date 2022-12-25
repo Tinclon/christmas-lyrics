@@ -9,8 +9,7 @@ And friends are calling "Yoo Hoo"
 Come on, it's lovely weather
 For a sleigh ride together with you
 
-Giddy-yap giddy-yap giddy-yap
-let's go
+Giddy-yap giddy-yap giddy-yap let's go
 Let's look at the snow
 We're riding in a wonderland of snow
 
