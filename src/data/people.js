@@ -13,11 +13,11 @@ export default () => ({
     ],
     Nielsen_ck: [
         { name: "🟡 Clinton" },
-        { name: "Katrina"    },
-        { name: "Talitha"    },
+        { name: "😼 Katrina"    },
+        { name: "🔵 Talitha"    },
         { name: "🫥 Lukas"   },
-        { name: "Annaliess"  },
-        { name: "Savannah"   }
+        { name: "🟣 Annaliess"  },
+        { name: "🩵 Savannah"   }
     ],
     Baker_jc: [
         { name: "Jeremy"   },
