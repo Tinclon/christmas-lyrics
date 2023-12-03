@@ -84,6 +84,7 @@ export default drawerWidth => makeStyles(theme => ({
         paddingRight: '12px'
     },
     chip: {
+        fontSize: '8.5pt',
         verticalAlign: 'text-bottom'
     },
     opusPaper: {
