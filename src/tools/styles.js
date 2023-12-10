@@ -2,6 +2,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 export default drawerWidth => makeStyles(theme => ({
     root: {
+        //backgroundColor: theme.palette.grey.A400,
         display: 'flex',
         height: '100%'
     },
@@ -94,9 +95,11 @@ export default drawerWidth => makeStyles(theme => ({
         paddingBottom: '16px'
     },
     invisible: {
-        backgroundColor: theme.palette.grey.A400,
+        backgroundColor: 'transparent',
         paddingLeft: '0',
         paddingRight: '0',
+        zIndex: '100',
+        position: 'absolute'
     },
     silhouette: {
         padding: `${theme.spacing(3)}px ${theme.spacing(3)}px 0 ${theme.spacing(3)}px`,
@@ -114,6 +117,7 @@ export default drawerWidth => makeStyles(theme => ({
         height: '100%'
     },
     watermark: {
+        zIndex: '10',
         position: 'fixed',
         bottom: '0',
         right: '10px',

@@ -5,6 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="blue" />
     <meta name="description" content="Christmas Lyrics"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -27,11 +28,21 @@
           display: none !important;
         }
       }
-
+      .ios-peek {
+        background-color: #303030;
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- this little div is here to force ios lower overscroll area background color -->
+    <div class="ios-peek"></div>
   </body>
 </html>
