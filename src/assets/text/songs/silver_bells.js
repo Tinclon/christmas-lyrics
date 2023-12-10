@@ -16,12 +16,10 @@ Blink a bright red and green
 As the shoppers rush home with their treasures
 Hear the snow crunch, see the kids bunch
 This is Santa's big scene
-And above all this bustle you'll here
+And above all this bustle you'll hear
 
 Silver Bells, Silver Bells
 It's Christmas time in the city
 Ring-a-ling, hear them sing
-Soon it will be Christmas Day
-
 Soon it will be Christmas Day
 `
