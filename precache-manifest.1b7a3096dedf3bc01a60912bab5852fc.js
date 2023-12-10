@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df370fac095e726aeb4dd05d4bb17eb5",
+    "revision": "6597595ccc9ce6e01fcdd15395bc1266",
     "url": "/christmas-lyrics/index.html"
   },
   {
