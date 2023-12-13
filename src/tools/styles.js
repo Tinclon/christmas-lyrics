@@ -2,7 +2,6 @@ import {makeStyles} from '@material-ui/core/styles';
 
 export default drawerWidth => makeStyles(theme => ({
     root: {
-        //backgroundColor: theme.palette.grey.A400,
         display: 'flex',
         height: '100%'
     },

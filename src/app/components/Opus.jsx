@@ -27,6 +27,12 @@ export default props => {
                             && opus.text.split("\n").reduce((acc, curr) =>
                                 <Fragment>{acc}<br/>{curr.trim()}</Fragment>)
                     }
+                    {
+                        // Add some blank space at the bottom to allow for scrolling
+                        !opus.scripture
+                            && " ".repeat(30).split(" ").reduce(acc =>
+                                <Fragment>{acc}<br/></Fragment>)
+                    }
                 </Typography>
             </Paper>
         </Fragment>
