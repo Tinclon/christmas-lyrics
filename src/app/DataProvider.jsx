@@ -23,6 +23,8 @@ export default () => {
     const classes = styles(drawerWidth);
     const theme = createMuiTheme({palette: {type: "dark"}});
 
+    const showFamilyPicker = false;
+
     let props = {classes, theme};
 
     // Create hooks
@@ -34,10 +36,14 @@ export default () => {
             localStorage.setItem("family", family);
             setFamily(family);
         };
-        props = {...props, handleSetFamily};
-        return (
-            <Family {...props} />
-        );
+        if (!showFamilyPicker) {
+            handleSetFamily("Nielsen_ck");
+        } else {
+            props = {...props, handleSetFamily, showFamilyPicker};
+            return (
+                <Family {...props} />
+            );
+        }
     }
 
     // Pull in all the data
@@ -65,7 +71,7 @@ export default () => {
     props = {
         ...props,
         classes, theme, title, people, scriptures, songs,
-        getLocation, handleNewFamily
+        getLocation, handleNewFamily, showFamilyPicker,
     };
 
     return (

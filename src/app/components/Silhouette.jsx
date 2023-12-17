@@ -12,7 +12,8 @@ export default props => {
         year,
         date,
         people,
-        handleNewFamily
+        handleNewFamily,
+        showFamilyPicker,
     } = props;
 
     const offset = year - date;
@@ -48,9 +49,13 @@ export default props => {
                 </Container>) ||
                 <div/>
             }
-            <footer className={classes.newFamily} onClick={handleNewFamily}>
-                I want a new family ...
-            </footer>
+            {
+                (showFamilyPicker &&
+                    <footer className={classes.newFamily} onClick={handleNewFamily}>
+                        I want a new family ...
+                    </footer>
+                )
+            }
         </div>
     );
 }

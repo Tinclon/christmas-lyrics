@@ -15,7 +15,8 @@ export default props => {
         theme,
         scriptures,
         getLocation,
-        handleNewFamily
+        handleNewFamily,
+        showFamilyPicker,
     } = props;
 
     const now = new Date();
@@ -62,7 +63,7 @@ export default props => {
 
     props = {
         ...props,
-        handleNewFamily,
+        handleNewFamily, showFamilyPicker,
         year, date, songs, scripture, opus, drawerOpen,
         handleDrawerOpen, handleDrawerClose, handleDateChange, handleChooseOpus, toggleSungSong,
     };
