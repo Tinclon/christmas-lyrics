@@ -28,7 +28,7 @@ export default () => {
     let props = {classes, theme};
 
     // Create hooks
-    const [family, setFamily] = React.useState(localStorage.getItem("family"));
+    const [family, setFamily] = React.useState(showFamilyPicker ? localStorage.getItem("family") : "Nielsen_ck");
 
     if (!family) {
         // Set up handlers
@@ -36,14 +36,10 @@ export default () => {
             localStorage.setItem("family", family);
             setFamily(family);
         };
-        if (!showFamilyPicker) {
-            handleSetFamily("Nielsen_ck");
-        } else {
-            props = {...props, handleSetFamily, showFamilyPicker};
-            return (
-                <Family {...props} />
-            );
-        }
+        props = {...props, handleSetFamily, showFamilyPicker};
+        return (
+            <Family {...props} />
+        );
     }
 
     // Pull in all the data
