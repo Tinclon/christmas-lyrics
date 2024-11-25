@@ -14,7 +14,7 @@ export default () => ({
     Nielsen_ck: [
         { name: "🟡 Clinton"    },
         { name: "😼 Katrina"    },
-        { name: "🔵 Talitha"    },
+//        { name: "🔵 Talitha"    },
         { name: "🫥 Lukas"      },
         { name: "🐎 Annaliess"  },
         { name: "🩵 Savannah"   },
