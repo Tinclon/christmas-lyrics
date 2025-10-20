@@ -28,23 +28,29 @@ export default props => {
                 <Container maxWidth="sm" className={classes.assignmentContainer}>
                     <Paper elevation={10} className={classes.assignmentContainer}>
                         <Box>
-                            <Assignment offset={offset + 0} icon={"🕯"} text={"candle"} {...props} />
-                            <Assignment offset={offset + 1} icon={"🎵"} text={"song"} {...props} />
+                            <Assignment offset={offset + 0} icon={"🪔"} text={"candle"} {...props} />
+                            <Assignment offset={offset + 1} icon={"🕯️"} text={"candle"} {...props} />
                         </Box>
                         <Box>
-                            <Assignment offset={offset + 2} icon={"📖"} text={"scripture"} {...props} />
-                            <Assignment offset={offset + 3} icon={"🙏"} text={"prayer"} {...props} />
+                            <Assignment offset={offset + 2} icon={"🎵"} text={"song"} {...props} />
+                            <Assignment offset={offset + 3} icon={"📖"} text={"scripture"} {...props} />
                         </Box>
                         <Box>
-                            <Assignment offset={offset + 4} icon={"🎶"} text={"song"} {...props} />
-                            <Assignment offset={offset + 5} icon={"🕯"} text={"candle"} {...props} />
+                            <Assignment offset={offset + 4} icon={"🙏"} text={"prayer"} {...props} />
+                            <Assignment offset={offset + 5} icon={"🎶"} text={"song"} {...props} />
                         </Box>
                         { people.length > 6 &&
                             <Box>
-                                <Assignment offset={offset + 6} icon={"🎼"} text={"celebrate"} {...props} />
-                                <Assignment offset={offset + 7} icon={"🗓️"} text={"celebrate"} {...props} />
+                                <Assignment offset={offset + 6} icon={"🕯️"} text={"candle"} {...props} />
+                                <Assignment offset={offset + 7} icon={"🪔"} text={"candle"} {...props} />
                             </Box>
                         }
+                        { people.length > 8 &&
+                            <Box>
+                                <Assignment offset={offset + 8} icon={"🗓️"} text={"advent"} {...props} />
+                                <Assignment offset={offset + 9} icon={"❓"} text={"what?"} {...props} />
+                            </Box>
+                        }                        
                     </Paper>
                 </Container>) ||
                 <div/>
