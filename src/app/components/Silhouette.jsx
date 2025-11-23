@@ -48,7 +48,6 @@ export default props => {
                         { people.length > 8 &&
                             <Box>
                                 <Assignment offset={offset + 8} icon={"🗓️"} text={"advent"} {...props} />
-                                <Assignment offset={offset + 9} icon={"❓"} text={"what?"} {...props} />
                             </Box>
                         }                        
                     </Paper>
