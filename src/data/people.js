@@ -21,7 +21,6 @@ export default () => ({
         { name: "🦒 Ellen"      },
         { name: "🐯 Chantille"  },
         { name: "🌹 Rose"       },
-        { name: "🗯️ Davina"     },
     ],
     Baker_jc: [
         { name: "Jeremy"   },
