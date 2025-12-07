@@ -9,7 +9,7 @@ import getSongs from "../data/songs";
 import Family from "./components/Family";
 
 const title = "Christmas";
-const drawerWidth = 330;
+const drawerWidth = 370;
 
 // Navigation
 // Doesn't work very well, so I inlined the scriptures
@@ -57,6 +57,9 @@ export default () => {
 
     // Set the sung count
     songs.forEach(song => song.sung = (localStorage.getItem(song.title) || "0"));
+
+    // Set the scripture used status
+    scriptures.forEach(scripture => scripture.used = (localStorage.getItem(`scripture_${scripture.date}`) || "0"));
 
     const getLocation = () => decodeURI(window.location.hash.split("#")[1]);
     const handleNewFamily = () => {

@@ -13,7 +13,6 @@ export default props => {
     const {
         classes,
         theme,
-        scriptures,
         getLocation,
         handleNewFamily,
         showFamilyPicker,
@@ -24,6 +23,7 @@ export default props => {
     // Create hooks
     const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [songs, setSongs] = React.useState(props.songs);
+    const [scriptures, setScriptures] = React.useState(props.scriptures);
     const [date, setDate] = React.useState(now.getDate());
     const [opusReference, setOpusReference] = React.useState("");
 
@@ -54,18 +54,26 @@ export default props => {
     const handleDrawerClose = () => setDrawerOpen(false);
     const handleDateChange = date => () => setDate(((date % 24 + 24) % 24) || 24);
     const handleChooseOpus = reference => () => (window.location.hash = encodeURI(reference)) && handleDrawerClose();
-    const toggleSungSong = song => () => {
+    const toggleSungSong = song => e => {
+        e.stopPropagation();
         song.sung = song.sung === "0" ? "1" : "0";
         localStorage.setItem(song.title, song.sung);
         localStorage.setItem("datestamp", (new Date()).toISOString().split("T")[0]);
         setSongs([...songs]);
+    };
+    const toggleUsedScripture = scripture => e => {
+        e.stopPropagation();
+        scripture.used = scripture.used === "0" ? "1" : "0";
+        localStorage.setItem(`scripture_${scripture.date}`, scripture.used);
+        localStorage.setItem("datestamp", (new Date()).toISOString().split("T")[0]);
+        setScriptures([...scriptures]);
     };
 
     props = {
         ...props,
         handleNewFamily, showFamilyPicker,
         year, date, songs, scripture, opus, drawerOpen,
-        handleDrawerOpen, handleDrawerClose, handleDateChange, handleChooseOpus, toggleSungSong,
+        handleDrawerOpen, handleDrawerClose, handleDateChange, handleChooseOpus, toggleSungSong, toggleUsedScripture,
     };
 
     // Build the UI

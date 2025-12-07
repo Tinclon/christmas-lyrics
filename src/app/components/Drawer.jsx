@@ -24,7 +24,8 @@ export default props => {
         handleChooseOpus,
         handleDrawerClose,
         handleDateChange,
-        toggleSungSong
+        toggleSungSong,
+        toggleUsedScripture
     } = props;
 
     // Build the UI
@@ -54,16 +55,24 @@ export default props => {
                             onClick={handleDateChange(date - 1)} >
                             <ChevronLeftIcon />
                         </IconButton>
+                        <span style={{float: "right"}}>
+                            {scripture.ref && (
+                                <Checkbox
+                                    size="small"
+                                    onChange={toggleUsedScripture(scripture)}
+                                    checked={scripture.used > 0}
+                                />
+                            )}
+                            <IconButton
+                                onClick={handleDateChange(date + 1)} >
+                                <ChevronRightIcon />
+                            </IconButton>
+                        </span>
                         <Button
                             style={{fontSize: "10px"}}
                             onClick={handleChooseOpus(scripture.date)} >
                             {(scripture.ref && `December ${date}: ${scripture.ref}`) || "See you next December!"}
                         </Button>
-                        <IconButton
-                            onClick={handleDateChange(date + 1)}
-                            style={{float: "right"}} >
-                            <ChevronRightIcon />
-                        </IconButton>
                     </div>
                     <Divider />
                 </ListSubheader>
